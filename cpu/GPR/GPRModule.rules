@@ -1,0 +1,89 @@
+
+(rules PCB GPRModule
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 5219)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.2)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND +5V "/display_00" "/display_01" "/display_02" "/display_03" "/display_04" "/display_05"
+    "/display_06" "/display_07" "/display_08" "/display_09" "/display_10" "/display_11" "/display_12" "/display_13"
+    "/display_14" "/display_15" "/a1bus_15" "/a2bus_15" "/a1bus_14" "/a2bus_14" "/a1bus_13" "/a2bus_13"
+    "/a1bus_12" "/a2bus_12" "/a1bus_11" "/a2bus_11" "/a1bus_10" "/a2bus_10" "/a1bus_09" "/a2bus_09"
+    "/a1bus_08" "/a2bus_08" "/a1bus_07" "/a2bus_07" "/a1bus_06" "/a2bus_06" "/a1bus_05" "/a2bus_05"
+    "/a1bus_04" "/a2bus_04" "/a1bus_03" "/a2bus_03" "/a1bus_02" "/a2bus_02" "/a1bus_01" "/a2bus_01"
+    "/a1bus_00" "/a2bus_00" "/dbus_00" "/dbus_01" /CLK "/dbus_02" /~CLK "/dbus_03"
+    /HLT "/dbus_04" /DBG "/dbus_05" /RST "/dbus_06" "Net-(J2-Pad19)" "/dbus_07"
+    "Net-(J2-Pad17)" "/dbus_08" "Net-(J2-Pad15)" "/dbus_09" "Net-(J2-Pad13)" "/dbus_10" "/a2bus_write" "/dbus_11"
+    "/a1bus_write" "/dbus_12" "/dbus_write" "/dbus_13" "/dbus_read" "/dbus_14" "/dbus_15" "/reg_15"
+    "/reg_14" "/reg_13" "/reg_12" "/reg_08" "/reg_09" "/reg_10" "/reg_11" "/reg_04"
+    "/reg_05" "/reg_06" "/reg_07" "/reg_03" "/reg_02" "/reg_01" "/reg_00" "Net-(D0-Pad1)"
+    "Net-(D1-Pad1)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" "Net-(D4-Pad1)" "Net-(D5-Pad1)" "Net-(D6-Pad1)" "Net-(D7-Pad1)" "Net-(D8-Pad1)"
+    "Net-(D9-Pad1)" "Net-(D10-Pad1)" "Net-(D11-Pad1)" "Net-(D12-Pad1)" "Net-(D13-Pad1)" "Net-(D14-Pad1)" "Net-(D15-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
