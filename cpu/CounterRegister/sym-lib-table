@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name MySymbols)(type Legacy)(uri C:/Users/cremp/projects/cpu/cpu/lib/symbols/74ls245_bidirection.lib)(options "")(descr ""))
+)
