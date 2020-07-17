@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr C 22000 17000
+$Descr D 34000 22000
 encoding utf-8
 Sheet 1 1
 Title "Pipeline Module"
@@ -16,56 +16,56 @@ $EndDescr
 $Comp
 L 74xx:74LS32 U5
 U 1 1 5EAA28B8
-P 5200 11300
-F 0 "U5" H 5200 11625 50  0000 C CNN
-F 1 "74LS32" H 5200 11534 50  0000 C CNN
-F 2 "" H 5200 11300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5200 11300 50  0001 C CNN
-	1    5200 11300
+P 5300 8650
+F 0 "U5" H 5300 8850 50  0000 C CNN
+F 1 "74LS32" H 5300 8450 50  0000 C CNN
+F 2 "" H 5300 8650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5300 8650 50  0001 C CNN
+	1    5300 8650
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 U5
 U 2 1 5EAA6014
-P 5150 14300
-F 0 "U5" H 5150 14625 50  0000 C CNN
-F 1 "74LS32" H 5150 14534 50  0000 C CNN
-F 2 "" H 5150 14300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5150 14300 50  0001 C CNN
-	2    5150 14300
+P -1500 15500
+F 0 "U5" H -1500 15700 50  0000 C CNN
+F 1 "74LS32" H -1500 15300 50  0000 C CNN
+F 2 "" H -1500 15500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H -1500 15500 50  0001 C CNN
+	2    -1500 15500
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 U5
 U 3 1 5EAA7A4E
-P 5150 14850
-F 0 "U5" H 5150 15175 50  0000 C CNN
-F 1 "74LS32" H 5150 15084 50  0000 C CNN
-F 2 "" H 5150 14850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5150 14850 50  0001 C CNN
-	3    5150 14850
+P -1500 16050
+F 0 "U5" H -1500 16250 50  0000 C CNN
+F 1 "74LS32" H -1500 15850 50  0000 C CNN
+F 2 "" H -1500 16050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H -1500 16050 50  0001 C CNN
+	3    -1500 16050
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 U5
 U 4 1 5EAA9890
-P 5150 15450
-F 0 "U5" H 5150 15775 50  0000 C CNN
-F 1 "74LS32" H 5150 15684 50  0000 C CNN
-F 2 "" H 5150 15450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5150 15450 50  0001 C CNN
-	4    5150 15450
+P -1500 16650
+F 0 "U5" H -1500 16850 50  0000 C CNN
+F 1 "74LS32" H -1500 16450 50  0000 C CNN
+F 2 "" H -1500 16650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H -1500 16650 50  0001 C CNN
+	4    -1500 16650
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 U5
 U 5 1 5EAABAF0
-P 1850 13050
-F 0 "U5" V 1483 13050 50  0000 C CNN
-F 1 "74LS32" V 1574 13050 50  0000 C CNN
-F 2 "" H 1850 13050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1850 13050 50  0001 C CNN
-	5    1850 13050
+P -2700 16650
+F 0 "U5" V -3067 16650 50  0000 C CNN
+F 1 "74LS32" V -2976 16650 50  0000 C CNN
+F 2 "" H -2700 16650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H -2700 16650 50  0001 C CNN
+	5    -2700 16650
 	0    1    1    0   
 $EndComp
 Connection ~ 3900 7400
@@ -189,7 +189,7 @@ $EndComp
 Text Label 1450 5500 0    50   ~ 0
 addr_data_bus_03
 Text Label 1800 7900 0    50   ~ 0
-inst_read
+~inst_read
 Wire Wire Line
 	2150 7900 1800 7900
 $Comp
@@ -226,7 +226,7 @@ F 3 "" H 2150 7800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U1
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U1
 U 1 1 5EAC5CA1
 P 2650 7400
 F 0 "U1" H 2850 8050 50  0000 C CNN
@@ -322,7 +322,7 @@ F 3 "" H 2150 6100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U0
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U0
 U 1 1 5EAB5324
 P 2650 5700
 F 0 "U0" H 2850 6350 50  0000 C CNN
@@ -401,7 +401,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS574" H 11600 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U7
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U7
 U 1 1 5EE2020E
 P 9500 2300
 F 0 "U7" H 9700 2950 50  0000 C CNN
@@ -445,7 +445,7 @@ F 3 "" H 9500 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U8
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U8
 U 1 1 5EE20236
 P 9500 4000
 F 0 "U8" H 9700 4650 50  0000 C CNN
@@ -1203,7 +1203,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS574" H 15850 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U11
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U11
 U 1 1 5EE7B06A
 P 13750 2300
 F 0 "U11" H 13950 2950 50  0000 C CNN
@@ -1236,7 +1236,7 @@ F 3 "" H 13750 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U12
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U12
 U 1 1 5EE7B088
 P 13750 4000
 F 0 "U12" H 13950 4650 50  0000 C CNN
@@ -2005,7 +2005,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS574" H 20100 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U15
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U15
 U 1 1 5EEEAE7D
 P 18000 2300
 F 0 "U15" H 18200 2950 50  0000 C CNN
@@ -2038,7 +2038,7 @@ F 3 "" H 18000 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U16
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U16
 U 1 1 5EEEAE9B
 P 18000 4000
 F 0 "U16" H 18200 4650 50  0000 C CNN
@@ -2898,7 +2898,7 @@ Wire Wire Line
 Wire Wire Line
 	3150 5300 3300 5300
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U3
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U3
 U 1 1 5EACA10C
 P 4800 2300
 F 0 "U3" H 5000 2950 50  0000 C CNN
@@ -2931,7 +2931,7 @@ F 3 "" H 4800 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74ls245_bidirection:74LS245_BiDirection U4
+L PipelineModule-rescue:74LS245_BiDirection-74ls245_bidirection U4
 U 1 1 5EACA146
 P 4800 4000
 F 0 "U4" H 5000 4650 50  0000 C CNN
@@ -3525,28 +3525,28 @@ Wire Notes Line
 $Comp
 L power:GND #PWR?
 U 1 1 608EACD1
-P 1350 13050
-F 0 "#PWR?" H 1350 12800 50  0001 C CNN
-F 1 "GND" H 1355 12877 50  0000 C CNN
-F 2 "" H 1350 13050 50  0001 C CNN
-F 3 "" H 1350 13050 50  0001 C CNN
-	1    1350 13050
+P -3200 16650
+F 0 "#PWR?" H -3200 16400 50  0001 C CNN
+F 1 "GND" H -3195 16477 50  0000 C CNN
+F 2 "" H -3200 16650 50  0001 C CNN
+F 3 "" H -3200 16650 50  0001 C CNN
+	1    -3200 16650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 608EB9B5
-P 2350 13050
-F 0 "#PWR?" H 2350 12900 50  0001 C CNN
-F 1 "+5V" H 2365 13223 50  0000 C CNN
-F 2 "" H 2350 13050 50  0001 C CNN
-F 3 "" H 2350 13050 50  0001 C CNN
-	1    2350 13050
+P -2200 16650
+F 0 "#PWR?" H -2200 16500 50  0001 C CNN
+F 1 "+5V" H -2185 16823 50  0000 C CNN
+F 2 "" H -2200 16650 50  0001 C CNN
+F 3 "" H -2200 16650 50  0001 C CNN
+	1    -2200 16650
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4900 11200 4200 11200
-Text Label 4500 11200 0    50   ~ 0
+	6050 8650 5600 8650
+Text Label 5650 8650 0    50   ~ 0
 reg_inc_pc
 Text Notes 1500 1250 0    79   ~ 0
 Stage 1 - Fetch
@@ -3866,4 +3866,128 @@ Wire Wire Line
 	3300 5300 3300 1900
 Wire Wire Line
 	3250 1800 3250 5200
+Text Label 4650 8550 0    50   ~ 0
+~inst_read
+Wire Wire Line
+	5000 8550 4650 8550
+Text Label -3250 4400 0    50   ~ 0
+addr_data_bus_03
+Text Label -3250 5600 0    50   ~ 0
+addr_data_bus_15
+Wire Wire Line
+	-3250 5600 -3350 5500
+Wire Wire Line
+	-2550 5600 -3250 5600
+Text Label -3250 5500 0    50   ~ 0
+addr_data_bus_14
+Wire Wire Line
+	-3250 5500 -3350 5400
+Wire Wire Line
+	-2550 5500 -3250 5500
+Text Label -3250 5400 0    50   ~ 0
+addr_data_bus_13
+Wire Wire Line
+	-3250 5400 -3350 5300
+Wire Wire Line
+	-2550 5400 -3250 5400
+Text Label -3250 5300 0    50   ~ 0
+addr_data_bus_12
+Wire Wire Line
+	-3250 5300 -3350 5200
+Wire Wire Line
+	-2550 5300 -3250 5300
+Text Label -3250 5200 0    50   ~ 0
+addr_data_bus_11
+Wire Wire Line
+	-3250 5200 -3350 5100
+Wire Wire Line
+	-2550 5200 -3250 5200
+Text Label -3250 5100 0    50   ~ 0
+addr_data_bus_10
+Wire Wire Line
+	-3250 5100 -3350 5000
+Wire Wire Line
+	-2550 5100 -3250 5100
+Text Label -3250 5000 0    50   ~ 0
+addr_data_bus_09
+Wire Wire Line
+	-3250 5000 -3350 4900
+Wire Wire Line
+	-2550 5000 -3250 5000
+Text Label -3250 4900 0    50   ~ 0
+addr_data_bus_08
+Wire Wire Line
+	-3250 4900 -3350 4800
+Wire Wire Line
+	-2550 4900 -3250 4900
+Text Label -3250 4800 0    50   ~ 0
+addr_data_bus_07
+Wire Wire Line
+	-3250 4800 -3350 4700
+Wire Wire Line
+	-2550 4800 -3250 4800
+Text Label -3250 4700 0    50   ~ 0
+addr_data_bus_06
+Wire Wire Line
+	-3250 4700 -3350 4600
+Wire Wire Line
+	-2550 4700 -3250 4700
+Text Label -3250 4600 0    50   ~ 0
+addr_data_bus_05
+Wire Wire Line
+	-3250 4600 -3350 4500
+Wire Wire Line
+	-2550 4600 -3250 4600
+Text Label -3250 4500 0    50   ~ 0
+addr_data_bus_04
+Wire Wire Line
+	-3250 4500 -3350 4400
+Wire Wire Line
+	-2550 4500 -3250 4500
+Wire Wire Line
+	-3250 4400 -3350 4300
+Wire Wire Line
+	-2550 4400 -3250 4400
+Text Label -3250 4300 0    50   ~ 0
+addr_data_bus_02
+Wire Wire Line
+	-3250 4300 -3350 4200
+Wire Wire Line
+	-2550 4300 -3250 4300
+Text Label -3250 4200 0    50   ~ 0
+addr_data_bus_01
+Wire Wire Line
+	-3250 4200 -3350 4100
+Wire Wire Line
+	-2550 4200 -3250 4200
+Text Label -3250 4100 0    50   ~ 0
+addr_data_bus_00
+Wire Wire Line
+	-3250 4100 -3350 4000
+Wire Wire Line
+	-2550 4100 -3250 4100
+Text Label -3250 6350 0    50   ~ 0
+CLK
+Wire Wire Line
+	-3250 6350 -3350 6250
+Wire Wire Line
+	-2800 6350 -3250 6350
+Text Label 4650 8750 0    50   ~ 0
+CLK
+Wire Wire Line
+	4650 8750 4550 8650
+Wire Wire Line
+	5000 8750 4650 8750
+Wire Wire Line
+	4650 8550 4550 8450
+Wire Wire Line
+	6150 8550 6050 8650
+Wire Wire Line
+	-3250 6450 -2800 6450
+Text Label -2850 6450 2    50   ~ 0
+reg_inc_pc
+Wire Wire Line
+	-3350 6350 -3250 6450
+Text Notes 4800 8300 0    50   ~ 0
+Do not increment PC when address\nbus has contention
 $EndSCHEMATC

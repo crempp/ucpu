@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PipelineModule-rescue)(type Legacy)(uri ${KIPRJMOD}/PipelineModule-rescue.lib)(options "")(descr ""))
+)
