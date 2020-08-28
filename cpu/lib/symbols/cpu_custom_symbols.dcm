@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Bus_PCI_32bit_5V
+D PCI bus connector for 5V cards
+K PCI 5V
+F http://pinouts.ru/Slots/PCI_pinout.shtml
+$ENDCMP
+#
+#End Doc Library

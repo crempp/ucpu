@@ -1,4 +1,4 @@
-update=4/25/2020 7:06:07 PM
+update=8/26/2020 8:59:35 AM
 version=1
 last_client=eeschema
 [general]
@@ -239,7 +239,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=../../prints/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
