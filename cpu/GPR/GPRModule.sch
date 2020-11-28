@@ -2209,8 +2209,6 @@ NoConn ~ 2850 7650
 NoConn ~ 3050 7650
 NoConn ~ 3150 7650
 NoConn ~ 3250 7650
-NoConn ~ 3450 7650
-NoConn ~ 3350 7650
 NoConn ~ 5350 7650
 NoConn ~ 5450 7650
 NoConn ~ 5550 7650
@@ -2263,8 +2261,6 @@ NoConn ~ 8550 9450
 NoConn ~ 3050 9450
 NoConn ~ 3150 9450
 NoConn ~ 3250 9450
-NoConn ~ 3350 9450
-NoConn ~ 3450 9450
 Wire Wire Line
 	10650 9950 11150 9950
 Wire Wire Line
@@ -2427,4 +2423,32 @@ Wire Wire Line
 	11450 9100 11450 9850
 Wire Wire Line
 	11150 9100 11150 9950
+Wire Wire Line
+	3350 7650 3350 7200
+Wire Wire Line
+	3350 7200 2550 7200
+Wire Wire Line
+	2550 7200 2550 7550
+Connection ~ 2550 7550
+Wire Wire Line
+	3450 7650 3450 7150
+Wire Wire Line
+	3450 7150 2450 7150
+Wire Wire Line
+	2450 7150 2450 7650
+Connection ~ 2450 7650
+Wire Wire Line
+	3350 9450 3350 10050
+Wire Wire Line
+	3350 10050 2550 10050
+Wire Wire Line
+	2550 10050 2550 9550
+Connection ~ 2550 9550
+Wire Wire Line
+	3450 9450 3450 10100
+Wire Wire Line
+	3450 10100 2450 10100
+Wire Wire Line
+	2450 10100 2450 9450
+Connection ~ 2450 9450
 $EndSCHEMATC
