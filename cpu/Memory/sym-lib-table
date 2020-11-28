@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name KaiBader)(type Legacy)(uri C:/Users/cremp/projects/cpu/cpu/lib/symbols/KaiBader.lib)(options "")(descr ""))
+  (lib (name cpu_custom_symbols)(type Legacy)(uri C:/Users/cremp/projects/cpu/cpu/lib/symbols/cpu_custom_symbols.lib)(options "")(descr ""))
+)

@@ -3106,5 +3106,5 @@ F 3 "" H 8900 4900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1500 5200 1    50   ~ 0
-mem_bus_00
+md_bus_00
 $EndSCHEMATC

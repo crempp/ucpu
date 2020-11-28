@@ -8301,7 +8301,7 @@ NoConn ~ 2750 19900
 NoConn ~ 2850 19900
 NoConn ~ 2950 19900
 $Comp
-L cpu_custom_symbols:Bus_PCI_32bit_5V J1
+L ALUModule-rescue:Bus_PCI_32bit_5V-cpu_custom_symbols J1
 U 1 1 699FC8B3
 P 5250 19000
 F 0 "J1" H 5300 22150 50  0000 R CNN
