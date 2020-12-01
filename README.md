@@ -1,7 +1,7 @@
 # uCPU
 
-<img src="https://crempp.github.io/ucpu/files/images/breadboard.jpg" align="right"
-     alt="Size Limit logo by Anton Lovchikov" width="400" height="466">
+<img src="files/images/breadboard.jpg" align="right"
+     alt="Early version of the CPU on breadboards" width="400" height="466">
 
 This is a 16bit pipelined CPU designed on a breadboard and produced in modular component boards.
 
