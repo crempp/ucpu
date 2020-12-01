@@ -16,15 +16,15 @@ The CPU is designed around
 
 ## Architecture
 
-<img src="files/images/CPUArchitecture.svg" align="right"
+<img src="files/images/CPUArchitecture.svg"
      alt="CPU Architecture Diagram" width="748" height="515">
 
 ## GPR
 
 The CPU supports up to four registers: A, B, C and D. Each register has identical functionality. The registers hold 16 bit values and individual bytes are not accessible, only the full 16 bit value.
 
-<img src="files/GPRModule.svg" align="right"
-     alt="CPU Architecture Diagram" width="816" height="528">
+<img src="files/GPRModule.svg"
+     alt="General Purpose Register Schematic" width="816" height="528">
 
 Each register has access to multiple busses in the CPU. 16 bit values may be read from the general data bus (d_bus_read) and correspondingly 16 bit values may be written (d_bus_write) to the data bus. Additionally, general purpose registers may write 16 bit values to ALU via the X (x_bus_write) and Y (y_bus_write) bus. Values may not be read from the X and Y bus by the general purpose registers.
 
