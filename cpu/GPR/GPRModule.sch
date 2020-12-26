@@ -5,10 +5,10 @@ $Descr USLedger 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "General Purpose Register"
-Date "2020-11-19"
-Rev "1.2"
+Date "2020-12-25"
+Rev "1.3"
 Comp ""
-Comment1 ""
+Comment1 "Does not use CLK signal for operation"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -1018,70 +1018,6 @@ Wire Wire Line
 	5950 9450 5950 9900
 Wire Wire Line
 	6050 9450 6050 9900
-Text Label 4050 9900 1    50   ~ 0
-x_bus_12
-Text Label 3750 9900 1    50   ~ 0
-x_bus_15
-Wire Wire Line
-	4350 9450 4350 9900
-Text Label 4450 9900 1    50   ~ 0
-x_bus_08
-Wire Wire Line
-	4450 9450 4450 9900
-Text Label 4350 9900 1    50   ~ 0
-x_bus_09
-Text Label 4250 9900 1    50   ~ 0
-x_bus_10
-Wire Wire Line
-	4250 9450 4250 9900
-Text Label 4150 9900 1    50   ~ 0
-x_bus_11
-Wire Wire Line
-	4150 9450 4150 9900
-Wire Wire Line
-	3950 9450 3950 9900
-Wire Wire Line
-	4050 9450 4050 9900
-Text Label 3950 9900 1    50   ~ 0
-x_bus_13
-Text Label 3850 9900 1    50   ~ 0
-x_bus_14
-Wire Wire Line
-	3850 9450 3850 9900
-Wire Wire Line
-	3750 9450 3750 9900
-Text Label 4850 9900 1    50   ~ 0
-x_bus_04
-Text Label 4550 9900 1    50   ~ 0
-x_bus_07
-Wire Wire Line
-	5150 9450 5150 9900
-Text Label 5250 9900 1    50   ~ 0
-x_bus_00
-Wire Wire Line
-	5250 9450 5250 9900
-Text Label 5150 9900 1    50   ~ 0
-x_bus_01
-Text Label 5050 9900 1    50   ~ 0
-x_bus_02
-Wire Wire Line
-	5050 9450 5050 9900
-Text Label 4950 9900 1    50   ~ 0
-x_bus_03
-Wire Wire Line
-	4950 9450 4950 9900
-Wire Wire Line
-	4750 9450 4750 9900
-Wire Wire Line
-	4850 9450 4850 9900
-Text Label 4750 9900 1    50   ~ 0
-x_bus_05
-Text Label 4650 9900 1    50   ~ 0
-x_bus_06
-Wire Wire Line
-	4650 9450 4650 9900
-Wire Wire Line
-	4550 9450 4550 9900
 $Comp
 L power:+5V #PWR03
 U 1 1 6064EAC7
@@ -1440,54 +1376,6 @@ F 3 "~" H 11350 5400 50  0001 C CNN
 F 4 "311-220HRCT-ND" V 11350 5400 50  0001 C CNN "Digikey"
 	1    11350 5400
 	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS126 U11
-U 1 1 5FA9CDD4
-P 9850 4950
-F 0 "U11" V 9650 4700 50  0000 L CNN
-F 1 "74LS126" H 9800 5100 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9850 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 9850 4950 50  0001 C CNN
-F 4 "296-14546-1-ND" H 9850 4950 50  0001 C CNN "Digikey"
-	1    9850 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L 74xx:74LS126 U11
-U 2 1 5FA9DFAE
-P 10350 4950
-F 0 "U11" V 10150 4700 50  0000 L CNN
-F 1 "74LS126" H 10300 5100 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10350 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 10350 4950 50  0001 C CNN
-F 4 "296-14546-1-ND" H 10350 4950 50  0001 C CNN "Digikey"
-	2    10350 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L 74xx:74LS126 U11
-U 3 1 5FAA00AC
-P 10850 4950
-F 0 "U11" V 10650 4700 50  0000 L CNN
-F 1 "74LS126" H 10800 5100 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10850 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 10850 4950 50  0001 C CNN
-F 4 "296-14546-1-ND" H 10850 4950 50  0001 C CNN "Digikey"
-	3    10850 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L 74xx:74LS126 U11
-U 4 1 5FAA1BE0
-P 11350 4950
-F 0 "U11" V 11150 4700 50  0000 L CNN
-F 1 "74LS126" H 11300 5100 50  0000 L CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 11350 4950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 11350 4950 50  0001 C CNN
-F 4 "296-14546-1-ND" H 11350 4950 50  0001 C CNN "Digikey"
-	4    11350 4950
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	9850 4650 9850 4150
@@ -2262,17 +2150,6 @@ Wire Wire Line
 Connection ~ 10650 10100
 Connection ~ 10100 8050
 Connection ~ 11450 8050
-$Comp
-L 74xx:74LS126 U11
-U 5 1 614E36B3
-P 10750 7500
-F 0 "U11" V 11000 7500 50  0000 C CNN
-F 1 "74LS126" V 10600 7500 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10750 7500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 10750 7500 50  0001 C CNN
-	5    10750 7500
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	11450 7500 11350 7500
 Wire Wire Line
@@ -2485,4 +2362,123 @@ Wire Wire Line
 Wire Wire Line
 	2450 10100 2450 9450
 Connection ~ 2450 9450
+Wire Wire Line
+	4450 9450 4450 9900
+Wire Wire Line
+	4350 9450 4350 9900
+Text Label 4350 9900 1    50   ~ 0
+x_bus_06
+Text Label 4250 9900 1    50   ~ 0
+x_bus_05
+Wire Wire Line
+	4150 9450 4150 9900
+Wire Wire Line
+	4250 9450 4250 9900
+Wire Wire Line
+	4050 9450 4050 9900
+Text Label 4050 9900 1    50   ~ 0
+x_bus_03
+Wire Wire Line
+	3950 9450 3950 9900
+Text Label 3950 9900 1    50   ~ 0
+x_bus_02
+Text Label 3850 9900 1    50   ~ 0
+x_bus_01
+Wire Wire Line
+	3750 9450 3750 9900
+Text Label 3750 9900 1    50   ~ 0
+x_bus_00
+Wire Wire Line
+	3850 9450 3850 9900
+Text Label 4450 9900 1    50   ~ 0
+x_bus_07
+Text Label 4150 9900 1    50   ~ 0
+x_bus_04
+Wire Wire Line
+	5250 9450 5250 9900
+Wire Wire Line
+	5150 9450 5150 9900
+Text Label 5150 9900 1    50   ~ 0
+x_bus_14
+Text Label 5050 9900 1    50   ~ 0
+x_bus_13
+Wire Wire Line
+	4950 9450 4950 9900
+Wire Wire Line
+	5050 9450 5050 9900
+Wire Wire Line
+	4850 9450 4850 9900
+Text Label 4850 9900 1    50   ~ 0
+x_bus_11
+Wire Wire Line
+	4750 9450 4750 9900
+Text Label 4750 9900 1    50   ~ 0
+x_bus_10
+Text Label 4650 9900 1    50   ~ 0
+x_bus_09
+Wire Wire Line
+	4550 9450 4550 9900
+Text Label 4550 9900 1    50   ~ 0
+x_bus_08
+Wire Wire Line
+	4650 9450 4650 9900
+Text Label 5250 9900 1    50   ~ 0
+x_bus_15
+Text Label 4950 9900 1    50   ~ 0
+x_bus_12
+$Comp
+L 74xx:74LS125 U11
+U 1 1 5FF1FC65
+P 9850 4950
+F 0 "U11" V 9650 4700 50  0000 L CNN
+F 1 "74LS125" H 9800 5100 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9850 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 9850 4950 50  0001 C CNN
+	1    9850 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS125 U11
+U 2 1 5FF22E69
+P 10350 4950
+F 0 "U11" V 10150 4650 50  0000 L CNN
+F 1 "74LS125" H 10350 5100 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10350 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 10350 4950 50  0001 C CNN
+	2    10350 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS125 U11
+U 3 1 5FF24D72
+P 10850 4950
+F 0 "U11" V 10650 4650 50  0000 L CNN
+F 1 "74LS125" H 10850 5100 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10850 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 10850 4950 50  0001 C CNN
+	3    10850 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS125 U11
+U 4 1 5FF2598E
+P 11350 4950
+F 0 "U11" V 11150 4650 50  0000 L CNN
+F 1 "74LS125" H 11350 5100 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 11350 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 11350 4950 50  0001 C CNN
+	4    11350 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS125 U11
+U 5 1 5FF2888E
+P 10750 7500
+F 0 "U11" V 11000 7500 50  0000 C CNN
+F 1 "74LS125" V 10600 7500 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10750 7500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS125" H 10750 7500 50  0001 C CNN
+	5    10750 7500
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
