@@ -203,47 +203,47 @@
         "control": [ "DBUS_Write_SP", "DBUS_Read_D" ]
       },
 
-      {"p1": "si", "p2": "pc", "db": 42,
+      {"p1": "si", "p2": "pc", "db": 66,
         "control": [ "DBUS_Write_SI", "DBUS_Read_PC" ]
       },
-      {"p1": "si", "p2": "sp", "db": 43,
+      {"p1": "si", "p2": "sp", "db": 67,
         "control": [ "DBUS_Write_SI", "DBUS_Read_SP" ]
       },
-      {"p1": "si", "p2": "di", "db": 44,
+      {"p1": "si", "p2": "di", "db": 68,
         "control": [ "DBUS_Write_SI", "DBUS_Read_DI" ]
       },
-      {"p1": "si", "p2": "a", "db": 38,
+      {"p1": "si", "p2": "a", "db": 69,
         "control": [ "DBUS_Write_SI", "DBUS_Read_A" ]
       },
-      {"p1": "si", "p2": "b", "db": 38,
+      {"p1": "si", "p2": "b", "db": 70,
         "control": [ "DBUS_Write_SI", "DBUS_Read_B" ]
       },
-      {"p1": "si", "p2": "c", "db": 38,
+      {"p1": "si", "p2": "c", "db": 71,
         "control": [ "DBUS_Write_SI", "DBUS_Read_C" ]
       },
-      {"p1": "si", "p2": "d", "db": 38,
+      {"p1": "si", "p2": "d", "db": 72,
         "control": [ "DBUS_Write_SI", "DBUS_Read_D" ]
       },
 
-      {"p1": "di", "p2": "pc", "db": 45,
+      {"p1": "di", "p2": "pc", "db": 73,
         "control": [ "DBUS_Write_DI", "DBUS_Read_PC" ]
       },
-      {"p1": "di", "p2": "sp", "db": 46,
+      {"p1": "di", "p2": "sp", "db": 74,
         "control": [ "DBUS_Write_DI", "DBUS_Read_SP" ]
       },
-      {"p1": "di", "p2": "si", "db": 47,
+      {"p1": "di", "p2": "si", "db": 75,
         "control": [ "DBUS_Write_DI", "DBUS_Read_SI" ]
       },
-      {"p1": "di", "p2": "a", "db": 38,
+      {"p1": "di", "p2": "a", "db": 76,
         "control": [ "DBUS_Write_DI", "DBUS_Read_A" ]
       },
-      {"p1": "di", "p2": "b", "db": 38,
+      {"p1": "di", "p2": "b", "db": 77,
         "control": [ "DBUS_Write_DI", "DBUS_Read_B" ]
       },
-      {"p1": "di", "p2": "c", "db": 38,
+      {"p1": "di", "p2": "c", "db": 78,
         "control": [ "DBUS_Write_DI", "DBUS_Read_C" ]
       },
-      {"p1": "di", "p2": "d", "db": 38,
+      {"p1": "di", "p2": "d", "db": 79,
         "control": [ "DBUS_Write_DI", "DBUS_Read_D" ]
       }
     ]

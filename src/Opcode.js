@@ -8,6 +8,10 @@ export default class Opcode {
     this.control = opcodeArch.control;
     this.pipelineSignals = { 0: 0, 1: 0, 2: 0 }
 
+    this.buildSignals();
+  }
+
+  buildSignals() {
     // Apply the control line masks to this opcode's masks
     if (this.control) {
       for (const c of this.control) {
@@ -45,16 +49,6 @@ export default class Opcode {
         // Combine the signal value with the existing signal
         let stage = this.pipeline.controlSignals[pipeStageKey]["stage"]
         this.pipelineSignals[stage] |= computedSignalJoined;
-
-        // let stage = this.pipeline.controlSignals[c]["stage"]
-        // let mask_arr = this.pipeline.controlSignals[c]["mask"].replace(/ /g,"").split("");
-        // let mask_int = parseInt(this.pipeline.controlSignals[c]["mask"].replace(/ /g,""), 2);
-        // let mask_size = mask_arr.reduce((a, c) => parseInt(a) + parseInt(c));
-        // let val_int = this.control[c];
-        // let val_arr = val_int.toString(2).padStart(mask_size,"0").split("");
-        // let j = 0;
-        // let applied_val = mask_arr.map((c, i, a) => c == "0" ? "0" : val_arr[j++]);
-        // this.pipeline_signals[stage] |= parseInt(applied_val.join(""),2);
       }
     }
   }
