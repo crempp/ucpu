@@ -1,0 +1,251 @@
+{
+  "registers": {
+    "a": { "size":  16},
+    "b": { "size":  16},
+    "c": { "size":  16},
+    "d": { "size":  16},
+    "pc": { "size":  16},
+    "sp": { "size":  16},
+    "si": { "size":  16},
+    "di": { "size":  16}
+  },
+  "pipeline": {
+    "stages": {
+      "0": {},
+      "1": {
+        "XBUS_Write": "0000 0000 0000 0011",
+        "YBUS_Write": "0000 0000 0000 1100",
+        "ALU_Operation": "0000 0000 1111 0000"
+      },
+      "2": {
+        "DBUS_Write": "0000 0000 0000 1111",
+        "DBUS_Read": "0000 0000 1111 0000"
+      }
+    },
+    "controlLines": {
+      "Const_Read":   1,
+
+      "DBUS_Read_A":   1,
+      "DBUS_Read_B":   2,
+      "DBUS_Read_C":   3,
+      "DBUS_Read_D":   4,
+      "DBUS_Read_PC":  5,
+      "DBUS_Read_SP":  6,
+      "DBUS_Read_SI":  7,
+      "DBUS_Read_DI":  8,
+      "DBUS_Read_MEM": 9,
+      "DBUS_Read_IO1": 10,
+      "DBUS_Read_IO2": 11,
+      "DBUS_Read_IO3": 12,
+      "DBUS_Read_IO4": 13,
+
+      "DBUS_Write_A":   1,
+      "DBUS_Write_B":   2,
+      "DBUS_Write_C":   3,
+      "DBUS_Write_D":   4,
+      "DBUS_Write_PC":  5,
+      "DBUS_Write_SP":  6,
+      "DBUS_Write_SI":  7,
+      "DBUS_Write_DI":  8,
+      "DBUS_Write_MEM": 9,
+      "DBUS_Write_IO1": 10,
+      "DBUS_Write_IO2": 11,
+      "DBUS_Write_IO3": 12,
+      "DBUS_Write_IO4": 13,
+      "DBUS_Write_ALU": 14
+    }
+  },
+  "opcodes": {
+    "nop": {"db": 0,
+      "control": []
+    },
+
+    "mov": [
+      {"p1": "a", "p2": "#1", "db": 16},
+      {"p1": "b", "p2": "#1", "db": 17},
+      {"p1": "c", "p2": "#1", "db": 18},
+      {"p1": "d", "p2": "#1", "db": 19},
+
+      {"p1": "a", "p2": "b", "db": 20,
+        "control": [ "DBUS_Write_A", "DBUS_Read_B" ]
+      },
+      {"p1": "a", "p2": "c", "db": 21,
+        "control": [ "DBUS_Write_A", "DBUS_Read_C" ]
+      },
+      {"p1": "a", "p2": "d", "db": 22,
+        "control": [ "DBUS_Write_A", "DBUS_Read_D" ]
+      },
+      {"p1": "a", "p2": "pc", "db": 23,
+        "control": [ "DBUS_Write_A", "DBUS_Read_PC" ]
+      },
+      {"p1": "a", "p2": "sp", "db": 24,
+        "control": [ "DBUS_Write_A", "DBUS_Read_SP" ]
+      },
+      {"p1": "a", "p2": "si", "db": 25,
+        "control": [ "DBUS_Write_A", "DBUS_Read_SI" ]
+      },
+      {"p1": "a", "p2": "di", "db": 26,
+        "control": [ "DBUS_Write_A", "DBUS_Read_DI" ]
+      },
+
+      {"p1": "b", "p2": "a", "db": 27,
+        "control": [ "DBUS_Write_B", "DBUS_Read_A" ]
+      },
+      {"p1": "b", "p2": "c", "db": 28,
+        "control": [ "DBUS_Write_B", "DBUS_Read_C" ]
+      },
+      {"p1": "b", "p2": "d", "db": 29,
+        "control": [ "DBUS_Write_B", "DBUS_Read_D" ]
+      },
+      {"p1": "b", "p2": "pc", "db": 30,
+        "control": [ "DBUS_Write_B", "DBUS_Read_PC" ]
+      },
+      {"p1": "b", "p2": "sp", "db": 31,
+        "control": [ "DBUS_Write_B", "DBUS_Read_SP" ]
+      },
+      {"p1": "b", "p2": "si", "db": 32,
+        "control": [ "DBUS_Write_B", "DBUS_Read_SI" ]
+      },
+      {"p1": "b", "p2": "di", "db": 33,
+        "control": [ "DBUS_Write_B", "DBUS_Read_DI" ]
+      },
+
+      {"p1": "c", "p2": "a", "db": 34,
+        "control": [ "DBUS_Write_C", "DBUS_Read_A" ]
+      },
+      {"p1": "c", "p2": "b", "db": 35,
+        "control": [ "DBUS_Write_C", "DBUS_Read_B" ]
+      },
+      {"p1": "c", "p2": "d", "db": 36,
+        "control": [ "DBUS_Write_C", "DBUS_Read_D" ]
+      },
+      {"p1": "c", "p2": "pc", "db": 37,
+        "control": [ "DBUS_Write_C", "DBUS_Read_PC" ]
+      },
+      {"p1": "c", "p2": "sp", "db": 38,
+        "control": [ "DBUS_Write_C", "DBUS_Read_SP" ]
+      },
+      {"p1": "c", "p2": "si", "db": 39,
+        "control": [ "DBUS_Write_C", "DBUS_Read_SI" ]
+      },
+      {"p1": "c", "p2": "di", "db": 40,
+        "control": [ "DBUS_Write_C", "DBUS_Read_DI" ]
+      },
+
+      {"p1": "d", "p2": "a", "db": 41,
+        "control": [ "DBUS_Write_D", "DBUS_Read_A" ]
+      },
+      {"p1": "d", "p2": "b", "db": 42,
+        "control": [ "DBUS_Write_D", "DBUS_Read_B" ]
+      },
+      {"p1": "d", "p2": "c", "db": 43,
+        "control": [ "DBUS_Write_D", "DBUS_Read_C" ]
+      },
+      {"p1": "d", "p2": "pc", "db": 44,
+        "control": [ "DBUS_Write_D", "DBUS_Read_PC" ]
+      },
+      {"p1": "d", "p2": "sp", "db": 45,
+        "control": [ "DBUS_Write_D", "DBUS_Read_SP" ]
+      },
+      {"p1": "d", "p2": "si", "db": 46,
+        "control": [ "DBUS_Write_D", "DBUS_Read_SI" ]
+      },
+      {"p1": "d", "p2": "di", "db": 47,
+        "control": [ "DBUS_Write_D", "DBUS_Read_DI" ]
+      },
+
+      {"p1": "pc", "p2": "#1", "db": 48},
+      {"p1": "sp", "p2": "#1", "db": 49},
+      {"p1": "si", "p2": "#1", "db": 50},
+      {"p1": "di", "p2": "#1", "db": 51},
+
+      {"p1": "pc", "p2": "sp", "db": 52,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_SP" ]
+      },
+      {"p1": "pc", "p2": "si", "db": 53,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_SI" ]
+      },
+      {"p1": "pc", "p2": "di", "db": 54,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_DI" ]
+      },
+      {"p1": "pc", "p2": "a", "db": 55,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_A" ]
+      },
+      {"p1": "pc", "p2": "b", "db": 56,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_B" ]
+      },
+      {"p1": "pc", "p2": "c", "db": 57,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_C" ]
+      },
+      {"p1": "pc", "p2": "d", "db": 58,
+        "control": [ "DBUS_Write_PC", "DBUS_Read_D" ]
+      },
+
+      {"p1": "sp", "p2": "pc", "db": 59,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_PC" ]
+      },
+      {"p1": "sp", "p2": "si", "db": 60,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_SI" ]
+      },
+      {"p1": "sp", "p2": "di", "db": 61,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_DI" ]
+      },
+      {"p1": "sp", "p2": "a", "db": 62,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_A" ]
+      },
+      {"p1": "sp", "p2": "b", "db": 63,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_B" ]
+      },
+      {"p1": "sp", "p2": "c", "db": 64,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_C" ]
+      },
+      {"p1": "sp", "p2": "d", "db": 65,
+        "control": [ "DBUS_Write_SP", "DBUS_Read_D" ]
+      },
+
+      {"p1": "si", "p2": "pc", "db": 42,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_PC" ]
+      },
+      {"p1": "si", "p2": "sp", "db": 43,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_SP" ]
+      },
+      {"p1": "si", "p2": "di", "db": 44,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_DI" ]
+      },
+      {"p1": "si", "p2": "a", "db": 38,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_A" ]
+      },
+      {"p1": "si", "p2": "b", "db": 38,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_B" ]
+      },
+      {"p1": "si", "p2": "c", "db": 38,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_C" ]
+      },
+      {"p1": "si", "p2": "d", "db": 38,
+        "control": [ "DBUS_Write_SI", "DBUS_Read_D" ]
+      },
+
+      {"p1": "di", "p2": "pc", "db": 45,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_PC" ]
+      },
+      {"p1": "di", "p2": "sp", "db": 46,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_SP" ]
+      },
+      {"p1": "di", "p2": "si", "db": 47,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_SI" ]
+      },
+      {"p1": "di", "p2": "a", "db": 38,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_A" ]
+      },
+      {"p1": "di", "p2": "b", "db": 38,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_B" ]
+      },
+      {"p1": "di", "p2": "c", "db": 38,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_C" ]
+      },
+      {"p1": "di", "p2": "d", "db": 38,
+        "control": [ "DBUS_Write_DI", "DBUS_Read_D" ]
+      }
+    ]
+  }
+}
