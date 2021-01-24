@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name cpu_custom_symbols)(type Legacy)(uri C:/Users/cremp/projects/cpu/cpu/lib/symbols/cpu_custom_symbols.lib)(options "")(descr ""))
+  (lib (name AddressRegisterModule-rescue)(type Legacy)(uri ${KIPRJMOD}/AddressRegisterModule-rescue.lib)(options "")(descr ""))
+)

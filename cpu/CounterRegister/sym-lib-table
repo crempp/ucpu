@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name MySymbols)(type Legacy)(uri C:/Users/cremp/projects/cpu/cpu/lib/symbols/cpu_custom_symbols.lib)(options "")(descr ""))
-  (lib (name CounterRegisterModule-rescue)(type Legacy)(uri ${KIPRJMOD}/CounterRegisterModule-rescue.lib)(options "")(descr ""))
-)
