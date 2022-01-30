@@ -1,4 +1,4 @@
-update=11/8/2020 5:12:13 PM
+update=1/29/2022 4:51:22 PM
 version=1
 last_client=eeschema
 [general]
@@ -37,7 +37,7 @@ PageLayoutDescrFile=
 PlotDirectoryName=../../files/
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1
