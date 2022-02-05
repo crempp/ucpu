@@ -33,8 +33,8 @@ Four control signals control the operation of the general purpose register.
 
 ****
 .General Purpose Register Schematic
-[link=/schematics/GPRModule.svg,window="_blank"]
-image::/img/schematics/GPRModule.png[General Purpose Register Schematic]
+[link=./img/schematics/GPRModule.svg,window="_blank"]
+image::./img/schematics/GPRModule.png[General Purpose Register Schematic]
 ****
 
 === References

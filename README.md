@@ -1,6 +1,6 @@
 # uCPU
 
-<img src="files/images/breadboard.jpg" align="right"
+<img src="docs/static/img/breadboard.jpg" align="right"
      alt="Early version of the CPU on breadboards" width="400" height="466">
 
 This is a 16bit pipelined CPU designed on a breadboard and produced in modular component boards.
@@ -16,4 +16,4 @@ The CPU is designed around
 
 ## Documentation
 
-
+Documentation is located [here](https://crempp.github.io/ucpu)

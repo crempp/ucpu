@@ -8,7 +8,7 @@ bookFlatSection: true
 
 ****
 .Early version of the CPU on breadboards
-image::/img/breadboard.jpg[Early version of the CPU on breadboards]
+image::./img/breadboard.jpg[Early version of the CPU on breadboards]
 ****
 
 This is a 16bit pipelined CPU designed on a breadboard and produced in modular component boards that connect via a backplane.
@@ -34,18 +34,18 @@ Memory 64k to 256k
 
 ****
 .CPU Architecture
-[link=/img/CPUArchitecture.svg,window="_blank"]
-image::/img/CPUArchitecture.svg[CPU Architecture]
+[link=./img/CPUArchitecture.svg,window="_blank"]
+image::./img/CPUArchitecture.svg[CPU Architecture]
 ****
 
 
 == Schematics
 
-* Address Register (rev 1.2) [link:/img/schematics/AddressRegisterModule.pdf[PDF, window="_blank"]][link:/img/schematics/AddressRegisterModule.svg[SVG, window="_blank"]][link:/img/schematics/AddressRegisterModule.png[PNG, window="_blank"]]
-* ALU (rev 1.0) [link:/img/schematics/ALUModule.pdf[PDF, window="_blank"]][link:/img/schematics/ALUModule.svg[SVG, window="_blank"]][link:/img/schematics/ALUModule.png[PNG, window="_blank"]]
-* Backplane (rev 1.0)[link:/img/schematics/Backplane.pdf[PDF, window="_blank"]][link:/img/schematics/Backplane.svg[SVG, window="_blank"]][link:/img/schematics/Backplane.png[PNG, window="_blank"]]
-* GPR (rev 1.3)[link:/img/schematics/GPRModule.pdf[PDF, window="_blank"]][link:/img/schematics/GPRModule.svg[SVG, window="_blank"]][link:/img/schematics/GPRModule.png[PNG, window="_blank"]]
-* Memory (rev 1.0)[link:/img/schematics/MemoryModule.pdf[PDF, window="_blank"]][link:/img/schematics/MemoryModule.svg[SVG, window="_blank"]][link:/img/schematics/MemoryModule.png[PNG, window="_blank"]]
+* Address Register (rev 1.2) [link:./img/schematics/AddressRegisterModule.pdf[PDF, window="_blank"]][link:./img/schematics/AddressRegisterModule.svg[SVG, window="_blank"]][link:./img/schematics/AddressRegisterModule.png[PNG, window="_blank"]]
+* ALU (rev 1.0) [link:./img/schematics/ALUModule.pdf[PDF, window="_blank"]][link:./img/schematics/ALUModule.svg[SVG, window="_blank"]][link:./img/schematics/ALUModule.png[PNG, window="_blank"]]
+* Backplane (rev 1.0)[link:./img/schematics/Backplane.pdf[PDF, window="_blank"]][link:./img/schematics/Backplane.svg[SVG, window="_blank"]][link:./img/schematics/Backplane.png[PNG, window="_blank"]]
+* GPR (rev 1.3)[link:./img/schematics/GPRModule.pdf[PDF, window="_blank"]][link:./img/schematics/GPRModule.svg[SVG, window="_blank"]][link:./img/schematics/GPRModule.png[PNG, window="_blank"]]
+* Memory (rev 1.0)[link:./img/schematics/MemoryModule.pdf[PDF, window="_blank"]][link:./img/schematics/MemoryModule.svg[SVG, window="_blank"]][link:./img/schematics/MemoryModule.png[PNG, window="_blank"]]
 
 == BOM
 
