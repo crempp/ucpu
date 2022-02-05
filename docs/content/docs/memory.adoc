@@ -1,0 +1,13 @@
+---
+title: "Memory"
+date: 2022-02-04T14:46:34-08:00
+weight: 2
+draft: false
+bookFlatSection: true
+---
+
+== Memory
+
+== Reference
+
+* link:https://en.wikipedia.org/wiki/Bank_switching[Bank Switching, window="_blank"]

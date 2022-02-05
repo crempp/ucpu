@@ -1,0 +1,26 @@
+---
+type: docs
+draft: false
+bookFlatSection: true
+---
+
+== TODO:
+
+. License file
+
+Documentation
+
+. Get Antora running
+
+Address Reg
+
+. Validate connector positions
+
+Memory
+
+
+Compliler
+
+. Web editor for writing code
+. JS compiler
+. JS emulator

@@ -1,0 +1,40 @@
+---
+title: "General Purpose Registers"
+date: 2022-02-04T14:46:34-08:00
+weight: 1
+draft: false
+bookFlatSection: true
+---
+
+== General Purpose Registers ==
+
+Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.
+
+The CPU supports up to four registers: A, B, C and D. Each register has identical functionality. The registers hold 16 bit values and individual bytes are not accessible, only the full 16 bit value.
+
+Each register has access to multiple busses in the CPU. 16 bit values may be read from the general data bus (d_bus_read) and correspondingly 16 bit values may be written (d_bus_write) to the data bus. Additionally, general purpose registers may write 16 bit values to ALU via the X (x_bus_write) and Y (y_bus_write) bus. Values may not be read from the X and Y bus by the general purpose registers.
+
+Four control signals control the operation of the general purpose register.
+
+[cols="h,1,1,1"]
+|===
+| d_bus_read | 16 bit | Active high
+| Read the contents of the data bus into the register latch
+
+| d_bus_write | 16 bit | Active Low
+| Write the contents of the register latch onto the data bus
+
+|x_bus_write | 16 bit | Active Low
+| Write the contents of the register latch onto the X bus to be used by the ALU
+
+| y_bus_write | 16 bit | Active Low
+|  Write the contents of the register latch onto the Y bus to be used by the ALU
+|===
+
+****
+.General Purpose Register Schematic
+[link=/schematics/GPRModule.svg,window="_blank"]
+image::/img/schematics/GPRModule.png[General Purpose Register Schematic]
+****
+
+=== References

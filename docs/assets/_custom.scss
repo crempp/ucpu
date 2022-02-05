@@ -1,0 +1,18 @@
+.sidebarblock {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+
+    .title {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {}
+
+// Extra space for big screens
+@media screen and (min-width: $container-max-width) {}
