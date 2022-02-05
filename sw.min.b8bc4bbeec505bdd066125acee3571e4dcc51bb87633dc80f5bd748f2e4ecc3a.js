@@ -1,0 +1,1 @@
+navigator.serviceWorker&&navigator.serviceWorker.register("/ucpu/sw.js",{scope:"/ucpu/"})

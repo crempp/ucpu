@@ -1,0 +1,174 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="General Purpose Registers Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.
+ The CPU supports up to four registers: A, B, C and D.">
+<meta name=theme-color content="#FFFFFF">
+<meta name=color-scheme content="light dark"><meta property="og:title" content="General Purpose Registers">
+<meta property="og:description" content="General Purpose Registers Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.
+ The CPU supports up to four registers: A, B, C and D.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://crempp.github.io/ucpu/docs/general-purpose-register/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2022-02-04T14:46:34-08:00">
+<meta property="article:modified_time" content="2022-02-04T21:08:17-08:00">
+<title>General Purpose Registers | uCPU Documentation</title>
+<link rel=manifest href=/ucpu/manifest.json>
+<link rel=icon href=/ucpu/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/ucpu/book.min.75cd719f021054bb9aef77c173bde1e4468f734382db626e6b273728339378f7.css integrity="sha256-dc1xnwIQVLua73fBc73h5EaPc0OC22Juayc3KDOTePc=" crossorigin=anonymous>
+<script defer src=/ucpu/flexsearch.min.js></script>
+<script defer src=/ucpu/en.search.min.e937083796ce8dc7ba83f3be7b7e8b002471bf19e84bbfdfd8fc27ff0212df31.js integrity="sha256-6TcIN5bOjce6g/O+e36LACRxvxnoS7/f2Pwn/wIS3zE=" crossorigin=anonymous></script>
+<script defer src=/ucpu/sw.min.b8bc4bbeec505bdd066125acee3571e4dcc51bb87633dc80f5bd748f2e4ecc3a.js integrity="sha256-uLxLvuxQW90GYSWs7jVx5NzFG7h2M9yA9b10jy5OzDo=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/ucpu/><span>uCPU Documentation</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/general-purpose-register/ class=active>General Purpose Registers</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/address-register/>Address Register</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/assembler/>Assembler</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/backplane/>Backplane</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/basic/>Basic</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/memory/>Memory</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/memory-map/>Memory Map</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/operating-system/>Operating System</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/pipeline/>Pipeline</a>
+</li>
+<li>
+<a href=https://crempp.github.io/ucpu/docs/TODO/>Todo</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/ucpu/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>General Purpose Registers</strong>
+<label for=toc-control>
+<img src=/ucpu/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents></nav>
+</aside>
+</header>
+<article class=markdown><div class=sect1>
+<h2 id=_general_purpose_registers>General Purpose Registers</h2>
+<div class=sectionbody>
+<div class=paragraph>
+<p>Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.</p>
+</div>
+<div class=paragraph>
+<p>The CPU supports up to four registers: A, B, C and D. Each register has identical functionality. The registers hold 16 bit values and individual bytes are not accessible, only the full 16 bit value.</p>
+</div>
+<div class=paragraph>
+<p>Each register has access to multiple busses in the CPU. 16 bit values may be read from the general data bus (d_bus_read) and correspondingly 16 bit values may be written (d_bus_write) to the data bus. Additionally, general purpose registers may write 16 bit values to ALU via the X (x_bus_write) and Y (y_bus_write) bus. Values may not be read from the X and Y bus by the general purpose registers.</p>
+</div>
+<div class=paragraph>
+<p>Four control signals control the operation of the general purpose register.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<col style=width:25%>
+<col style=width:25%>
+<col style=width:25%>
+<col style=width:25%>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class=tableblock>d_bus_read</p></th>
+<td class="tableblock halign-left valign-top"><p class=tableblock>16 bit</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Active high</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Read the contents of the data bus into the register latch</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class=tableblock>d_bus_write</p></th>
+<td class="tableblock halign-left valign-top"><p class=tableblock>16 bit</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Active Low</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Write the contents of the register latch onto the data bus</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class=tableblock>x_bus_write</p></th>
+<td class="tableblock halign-left valign-top"><p class=tableblock>16 bit</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Active Low</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Write the contents of the register latch onto the X bus to be used by the ALU</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class=tableblock>y_bus_write</p></th>
+<td class="tableblock halign-left valign-top"><p class=tableblock>16 bit</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Active Low</p></td>
+<td class="tableblock halign-left valign-top"><p class=tableblock>Write the contents of the register latch onto the Y bus to be used by the ALU</p></td>
+</tr>
+</tbody>
+</table>
+<div class=sidebarblock>
+<div class=content>
+<div class=imageblock>
+<div class=content>
+<a class=image href=/schematics/GPRModule.svg target=_blank rel=noopener><img src=/img/schematics/GPRModule.png alt="General Purpose Register Schematic"></a>
+</div>
+<div class=title>Figure 1. General Purpose Register Schematic</div>
+</div>
+</div>
+</div>
+<div class=sect2>
+<h3 id=_references>References</h3>
+</div>
+</div>
+</div>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+<div><a class="flex align-center" href=https://github.com/crempp/ucpu/commit/a1f45ca2e73d5d975154c14f273a49796cfb1b66 title="Last modified by Chad Rempp | February 5, 2022" target=_blank rel=noopener>
+<img src=/ucpu/svg/calendar.svg class=book-icon alt=Calendar>
+<span>February 5, 2022</span>
+</a>
+</div>
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents></nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
