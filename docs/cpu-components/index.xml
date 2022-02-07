@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>µCPU Documentation</title><link>https://crempp.github.io/ucpu/docs/cpu-components/</link><description>Recent content on µCPU Documentation</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>2020, Chad Rempp</copyright><atom:link href="https://crempp.github.io/ucpu/docs/cpu-components/index.xml" rel="self" type="application/rss+xml"/><item><title>General Purpose Registers</title><link>https://crempp.github.io/ucpu/docs/cpu-components/general-purpose-register/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/general-purpose-register/</guid><description>General Purpose Registers Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.
+The CPU supports up to four registers: A, B, C and D.</description></item><item><title>Address Register</title><link>https://crempp.github.io/ucpu/docs/cpu-components/address-register/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/address-register/</guid><description>Address Register The address register is a register that has the capability of incrementing and decrementing without the use of the ALU. Unlike the GPRs the address registers do not have access to the X and Y bus however they do have access to the address bus. The address registers can read and rewrite from the data bus and write to the address bus.
+Note Schematic (rev 1.</description></item><item><title>Memory</title><link>https://crempp.github.io/ucpu/docs/cpu-components/memory/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/memory/</guid><description>Memory The memory module has 64 Kb of addressable memory space with a base configuration of 32 Kb of ROM and 32 Kb of RAM. Bank switching is supported extending the available memory to
+304 Kb of RAM
+32 Kb of system ROM
+32 Kb of cartrige ROM
+32 Kb of I/O ROM
+Note Memory (rev 1.</description></item><item><title>Pipeline</title><link>https://crempp.github.io/ucpu/docs/cpu-components/pipeline/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/pipeline/</guid><description>Pipeline References https://www.cs.fsu.edu/~zwang/files/cda3101/Fall2017/Lecture8_cda3101.pdf</description></item><item><title>Backplane</title><link>https://crempp.github.io/ucpu/docs/cpu-components/backplane/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/backplane/</guid><description>Backplane Note Backplane (rev 1.0)[PDF] [SVG] [PNG] Figure 1. General Purpose Register Schematic Power
+Add voltage supervisor LP3470 to provide consistent starting state
+Reset
+Design circuit
+Wait for stable power
+Low power monitor
+…​?
+https://www.grappendorf.net/projects/6502-home-computer/reset-circuit.html
+https://www.smbaker.com/z80-power-on-reset-circuits
+https://blog.</description></item></channel></rss>
