@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name CPU_Custom_Symbols)(type Legacy)(uri ${KIPRJMOD}/lib/symbols/cpu_custom_symbols.lib)(options "")(descr ""))
+  (lib (name "CPU_Custom_Symbols")(type "Legacy")(uri "${KIPRJMOD}/lib/symbols/cpu_custom_symbols.lib")(options "")(descr ""))
+  (lib (name "Maxim_DS1220AD")(type "Legacy")(uri "${KIPRJMOD}/lib/IC_Maxim_DS1220AD-200+/eec.lib")(options "")(descr ""))
 )

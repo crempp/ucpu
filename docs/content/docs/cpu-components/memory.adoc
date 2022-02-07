@@ -1,0 +1,185 @@
+---
+title: "Memory"
+date: 2022-02-04T14:46:34-08:00
+weight: 30
+draft: false
+---
+
+== Memory
+The memory module has 64 Kb of addressable memory space with a base configuration of 32 Kb of ROM and 32 Kb of RAM. Bank switching is supported extending the available memory to
+
+* 304 Kb of RAM
+* 32 Kb of system ROM
+* 32 Kb of cartrige ROM
+* 32 Kb of I/O ROM
+
+[NOTE]
+Memory (rev 1.0)[link:/ucpu/img/schematics/MemoryModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/MemoryModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/MemoryModule.png[PNG, window="_blank"]]
+
+****
+.General Purpose Register Schematic
+[link=/ucpu/img/schematics/MemoryModule.svg,window="_blank"]
+image::/ucpu/img/schematics/MemoryModule.png[General Purpose Register Schematic]
+****
+
+== Memory Map (Banking Off)
+
+.Memory Map
+[.center.compact.nostripe]
+[cols="1,1,1,^1,^1", width="75%",]
+|===
+| H Addr | L Addr | Decimal |Bank | Addr Size
+
+| 0x00 | 0x00 | 0 .3+^|[.rotate]#Bank A Rom# .3+|[.rotate]#16 Kb#
+
+| ...  | ...  | ...
+
+| 0x3F | 0xFF | 16,383
+
+| 0x40 | 0x00 | 16,384 .3+^|[.rotate]#Bank B ROM# .3+|[.rotate]#16 Kb#
+
+| ...  | ...  | ...
+
+| 0x7F | 0xFF | 32,767
+
+| 0x80 | 0x00 | 32,768 .3+|[.rotate]#Bank C RAM# .3+|[.rotate]#16 Kb#
+
+| ...  | ...  | ...
+
+| 0xBF | 0xFF | 49,151
+
+| 0xC0 | 0x00 | 49,152 .3+|[.rotate]#Bank D RAM# .3+|[.rotate]#16 Kb#
+
+| ...  | ...  | ...
+
+| 0xFF | 0xFF | 65,535
+
+|===
+
+== Banking
+
+In this description logical banks in the memory map are referred to with the letters A, B, C and D. Physical memory banks that can be assigned to logical banks are referred to with numbers 1, 2, 3, ....
+
+The first three memory banks (A, B, C) can be changed with a special instruction (TODO: Add instruction). Bank A is always a ROM though it could be system, cartrige or I/O ROM. This is because the program counter starts at 0x00 and must have executable code at boot. Bank D is not bankable because that is where the stack resides and banking that area of memory could cause errors.
+
+The CPU must have the base 32 Kb of ROM and 32 Kb of RAM installed but the extended banks are optional.
+
+The memory bank configuration is set via a register in the memory controller. The (Insert instruction here) instruction will write the contents of the A register to the memory bank register.There are 32 bank configurations as defined below
+
+A value of 0x00 is the default power on banking value. In this configuration there is no banking. The base 32 Kb of ROM and 32 KB of RAM is used.
+
+.Bank Register
+[.center.compact.nostripe]
+[cols="1,2,2,2", width="75%",]
+|===
+| Value | Bank A           | Bank B           | Bank C
+
+| 0x00  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:0 (Base C)
+
+| 0x01  | ROM A:1 (Cart)   | ROM B:0 (BASE B) | RAM C:0 (Base C)
+
+| 0x02  | ROM A:1 (Cart)   | RAM B:3          | RAM C:0 (Base C)
+
+| 0x03  | ROM A:1 (Cart)   | RAM B:3          | RAM C:2
+
+| 0x04  | ROM A:1 (Cart)   | RAM B:3          | RAM C:3
+
+| 0x05  | ROM A:1 (Cart)   | ROM B:1 (Cart)   | RAM C:0 (Base C)
+
+| 0x06  | ROM A:1 (Cart)   | ROM B:1 (Cart)   | RAM C:1
+
+| 0x07  | ROM A:1 (Cart)   | ROM B:1 (Cart)   | RAM C:2
+
+| 0x08  | ROM A:2 (I/O)    | RAM B:0 (BASE B) | RAM C:0 (Base C)
+
+| 0x09  | ROM A:2 (I/O)    | RAM B:3          | RAM C:0 (Base C)
+
+| 0x0A  | ROM A:2 (I/O)    | RAM B:3          | RAM C:2
+
+| 0x0B  | ROM A:2 (I/O)    | RAM B:3          | RAM C:3
+
+| 0x0C  | ROM A:2 (I/O)    | ROM B:2 (I/O)    | RAM C:0 (Base C)
+
+| 0x0D  | ROM A:2 (I/O)    | ROM B:2 (I/O)    | RAM C:1
+
+| 0x0E  | ROM A:2 (I/O)    | ROM B:2 (I/O)    | RAM C:2
+
+| 0x0F  3+| Unused
+
+| 0x10  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:1
+
+| 0x11  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:2
+
+| 0x12  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:3
+
+| 0x13  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:4
+
+| 0x14  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:5
+
+| 0x15  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:6
+
+| 0x16  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:7
+
+| 0x17  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:8
+
+| 0x18  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:9
+
+| 0x19  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:10
+
+| 0x1A  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:11
+
+| 0x1B  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:12
+
+| 0x1C  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:13
+
+| 0x1D  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:14
+
+| 0x1E  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:15
+
+| 0x1F  | ROM A:0 (Base A) | ROM B:0 (BASE B) | RAM C:16
+
+|===
+
+== Notes
+
+* ram and rom interleaved between two chips
+* bank switching scheme
+* bank swithcing example
+* mem map
+* IO devices have their own address space but can be read/write using the same address and data bus
+* Address bus is 16 bits wide. That gives an address space from 0x0000 to 0xFFFF (64 Kb)
+* ROM
+**    *** Uses AT28C64 which has 13 address lines and 8 data lines
+**    *** 8 bit data width means they must be doubled up to supply the CPU's 16 bit data width.
+**    *** ROM chips are split into chip A (low 8 bits) and chip B (high 8 bits)
+** This means that ROM code must be split abababab when programming
+** A ROM set (A&B) with 13 address lines takes up 8 Kb in the address space
+* RAM
+** Uses AS6C62256 which has 15 address lines and 8 data lines
+** Similar chip splitting to the ROMs
+** A RAM set (A&B) with 15 address lines takes up 32 Kb in the address space
+* To support additional RAM and ROM we use bank switching
+* TODO: On reset set bank reg to known state
+* ROM has a 120 ns read time which translates to ~8 Mhz
+* RAM read/write cycles take 55 - 65 ns which translate to about 15 MHz
+* TODO: Figure out if mem module should use MDBus or DBUS???
+
+## Thinking
+* 8k banks
+* switch to CY7C128A-45PC for memory (2K x 8)
+** https://www.digikey.com/en/products/detail/cypress-semiconductor-corp/CY7C128A-45PC/11553363
+** https://media.digikey.com/pdf/Data%20Sheets/Cypress%20PDFs/CY7C128A%20Rev2001.pdf
+** 11 address pins for 2k address space
+** two chips for 16bit data width (A&B) and two of these for an 8k bank (4 chips per bank)
+
+Breadboard controls (R-L)
+** RD
+** WR
+** MEM REQ
+** BANK
+
+== Reference
+
+* link:https://en.wikipedia.org/wiki/Bank_switching[Bank Switching, window="_blank"]
+* link:http://www.zcontrol.narod.ru/diagrams/ZramBankSwitch.pdf[Z80 Bank-Switching Scheme]
+* link:https://hackaday.io/project/98837-8-bit-portable-internet-enabled-computer/log/143571-moving-from-the-exotic-74ls610-mmu-to-normal-bank-switching[Moving From the Exotic 74LS610 MMU to Normal Bank Switching]

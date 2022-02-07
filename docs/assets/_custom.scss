@@ -1,18 +1,188 @@
-.sidebarblock {
-    width: 40%;
-    padding-left: .5rem;
-    margin-left: .5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
-
-    .title {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: $mobile-breakpoint) {}
-
-// Extra space for big screens
-@media screen and (min-width: $container-max-width) {}
+//@use "sass:map";
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
+//@import 'variables.scss';
+//@import "utils";
+//
+//// this leads to some stylesheet bloat
+//%title {
+//    //@extend %subheader;
+//    text-rendering: optimizeLegibility;
+//    text-align: left;
+//    font-style: $subheader-font-style;
+//    font-size: $subheader-font-size;
+//}
+//
+//body { font-size: 0.9rem; }
+//
+////div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6, pre, form, p, blockquote, th, td {
+////    margin: 0;
+////    padding: 0;
+////    direction: ltr;
+////}
+//
+//.book-page {
+//    article.markdown {
+//        .admonitionblock > table {
+//            // separate allows us to control border sides independently
+//            border-collapse: separate;
+//            border: 0;
+//            background: none;
+//            width: 100%;
+//            td.icon {
+//                text-align: center;
+//                width: 80px;
+//                img {
+//                    max-width: none;
+//                }
+//                .title {
+//                    font-weight: $header-font-weight;
+//                    text-transform: uppercase;
+//                }
+//                [class^="fa icon-"] {
+//                    font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default
+//                }
+//                .icon-note::before{content:"\f05a";color:#19407c}
+//                .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+//                .icon-warning::before{content:"\f071";color:#bf6900}
+//                .icon-caution::before{content:"\f06d";color:#bf3400}
+//            }
+//
+//            td.content {
+//                padding-left: emCalc(18px);
+//                padding-right: emCalc(20px);
+//                border-left: $hr-border-width $hr-border-style $hr-border-color;
+//                //color: $blockquote-font-color;
+//                color: $blockquote-cite-font-color;
+//
+//                & > div:last-child {
+//                    p, ol, ul, dl, dl dd:last-child {
+//                        margin-bottom: 0;
+//                    }
+//                }
+//                & > .title {
+//                    @extend %title;
+//                }
+//            }
+//        }
+//
+//        .admonitionblock.lead > table td.content {
+//            font-size: $paragraph-font-size * 1.5;
+//            line-height: $paragraph-line-height;
+//            color: $body-font-color;
+//        }
+//
+//        .admonitionblock.note td.icon { background-color: $admonition-color-note; }
+//        .admonitionblock.tip td.icon { background-color: $admonition-color-tip; }
+//        .admonitionblock.important td.icon { background-color: $admonition-color-important; }
+//        .admonitionblock.caution td.icon { background-color: $admonition-color-caution; }
+//        .admonitionblock.warning td.icon { background-color: $admonition-color-warning; }
+//
+//    }
+//}
+//
+//.primary {
+//    // NOTE include blockquote for when it doesn't have a nested p
+//    p, blockquote, dt, td.content {
+//        font-size: 1.0625rem;
+//    }
+//
+//    p {
+//        margin-bottom: 1.25rem;
+//    }
+//
+//    // restore font size in sidebar block and regular table cells
+//    .sidebarblock p, .sidebarblock dt, .sidebarblock td.content, p.tableblock {
+//        font-size: 1em;
+//    }
+//}
+////.sidebarblock {
+////    width: 40%;
+////    padding-left: .5rem;
+////    margin-left: .5rem;
+////    float: right;
+////    box-shadow: inset 5px 0 5px -5px #29627e;
+////    font-style: italic;
+////    color: #29627e;
+////
+////    .title {
+////        text-align: center;
+////    }
+////}
+//
+//.sidebarblock {
+//    @include panel($panel-bg, $panel-padding, false);
+//    @include radius;
+//
+//    padding-bottom: 0; // we add a margin-bottom using an after pseudo-element instead
+//
+//    &:after {
+//        display: block;
+//        content: "";
+//        margin-bottom: emCalc(20px);
+//    }
+//
+//    & > .content {
+//        & > .title {
+//            @extend h3;
+//            text-align: center;
+//            color: $subheader-font-color;
+//            //line-height: 1.45;
+//            margin-top: 0; // override margin increase we use to separate sections
+//            //border-bottom: $hr-border-width $hr-border-style $hr-border-color;
+//        }
+//    }
+//
+//    p, dt, td.content {
+//        font-size: 1em;
+//    }
+//}
+//
+//li > p {
+//    display: block;
+//    margin-block-start: 0;
+//    margin-block-end: 0;
+//    margin-inline-start: 0;
+//    margin-inline-end: 0;
+//}
+//
+//.exampleblock>.content {
+//    border-style: solid;
+//    border-width: 1px;
+//    margin-bottom: 1.25em;
+//    background: #fff;
+//    -webkit-border-radius: 4px;
+//    border-radius: 4px;
+//    border-color: #e0e0dc;
+//    -moz-box-shadow: 0 1px 4px #e0e0dc;
+//    -webkit-box-shadow: 0 1px 4px #e0e0dc;
+//    box-shadow: 0 1px 4px #e0e0dc;
+//    padding: 0 1.25em;
+//}
+//
+//subheader, .admonitionblock td.content>.title, .audioblock>.title, .exampleblock>.title, .imageblock>.title, .listingblock>.title, .literalblock>.title, .stemblock>.title, .openblock>.title, .paragraph>.title, .quoteblock>.title, table.tableblock>.title, .verseblock>.title, .videoblock>.title, .dlist>.title, .olist>.title, .ulist>.title, .qlist>.title, .hdlist>.title {
+//    line-height: 1.4;
+//    color: #7a2717;
+//    font-weight: normal;
+//    margin-top: 0;
+//    margin-bottom: 0.25em;
+//}
+//
+//.listingblock pre {
+//    margin: 0;
+//}
+//
+//.audioblock, .imageblock, .literalblock, .listingblock, .stemblock, .videoblock {
+//    margin-bottom: 1.25em;
+//}
+//
+//
+//span.rotate {
+//    transform: rotate(90deg);
+//    display: inline-block;
+//}
+//
+//@media screen and (max-width: $mobile-breakpoint) {}
+//
+//// Extra space for big screens
+//@media screen and (min-width: $container-max-width) {}

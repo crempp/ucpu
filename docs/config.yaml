@@ -1,98 +1,112 @@
 baseURL: 'https://crempp.github.io/ucpu'
 languageCode: 'en-us'
-title: 'uCPU Documentation'
-theme: "hugo-book"
-disableKinds:
-  - 'taxonomy'
-  - 'taxonomyTerm'
+title: 'µCPU Documentation'
+theme: "hugo-geekdoc"
+#disableKinds:
+#  - 'taxonomy'
+#  - 'taxonomyTerm'
+copyright: 2020, Chad Rempp
 
-copyright: asdfasdf
-
-# Book configuration
+# Required to get well formatted code blocks
+pygmentsUseClasses: true
+pygmentsCodeFences: true
 disablePathToLower: true
 enableGitInfo: true
 
-#menu:
-#  # before: []
-#  after:
-#    - name: "Github"
-#      url: "https://github.com/alex-shpak/hugo-book"
-#      weight: 10
-#    - name: "Hugo Themes"
-#      url: "https://themes.gohugo.io/hugo-book/"
-#      weight: 20
+markup:
+  goldmark.renderer:
+    # Needed for mermaid shortcode
+    unsafe: true
+  tableOfContents:
+    startLevel: 1
+    endLevel: 9
+
+  taxonomies:
+    tag: "tags"
 
 params:
   custom_css:
-    - "css/ucpu.css"
-
-  # (Optional, default light) Sets color theme: light, dark or auto.
-  # Theme 'auto' switches between dark and light modes based on browser/os preferences
-  BookTheme: "light"
-
-  # (Optional, default true) Controls table of contents visibility on right side of pages.
-  # Start and end levels can be controlled with markup.tableOfContents setting.
+    - "/css/custom.css"
+  # (Optional, default 6) Set how many table of contents levels to be showed on page.
+  # Use false to hide ToC, note that 0 will default to 6 (https://gohugo.io/functions/default/)
   # You can also specify this parameter per page in front matter.
-  BookToC: true
+  geekdocToC: 3
 
-  # (Optional, default none) Set the path to a logo for the book. If the logo is
-  # /static/logo.png then the path would be logo.png
-  # BookLogo: /logo.png
+  # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
+  # relative to your 'static/' folder.
+  geekdocLogo: "logo.png"
 
-  # (Optional, default none) Set leaf bundle to render as side menu
-  # When not specified file structure and weights will be used
-  #BookMenuBundle: /menu
+  # (Optional, default false) Render menu from data file in 'data/menu/main.yaml'.
+  # See also https://geekdocs.de/usage/menus/#bundle-menu.
+  geekdocMenuBundle: false
 
-  # (Optional, default docs) Specify root page to render child pages as menu.
-  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
-  # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
-  BookSection: docs
+  # (Optional, default false) Collapse all menu entries, can not be overwritten
+  # per page if enabled. Can be enabled per page via `geekdocCollapseSection`.
+  geekdocCollapseAllSections: false
 
-  # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: https://github.com/crempp/ucpu
+  # (Optional, default true) Show page navigation links at the bottom of each
+  # docs page (bundle menu only).
+  geekdocNextPrev: false
 
-  # (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
-  # commit hash for 'doc' page type.
-  # Requires 'BookRepo' param.
-  # Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
-  # Github uses 'commit', Bitbucket uses 'commits'
-  # BookCommitPath: commit
+  # (Optional, default true) Show a breadcrumb navigation bar at the top of each docs page.
+  # You can also specify this parameter per page in front matter.
+  geekdocBreadcrumb: false
 
-  # Enable "Edit this page" links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Edit path must point to root directory of repo.
-  # BookEditPath: edit/main/exampleSite
+  # (Optional, default none) Set source repository location. Used for 'Edit page' links.
+  # You can also specify this parameter per page in front matter.
+  # geekdocRepo: "https://github.com/thegeeklab/hugo"
 
-  # Configure the date format used on the pages
-  # - In git information
-  # - In blog posts
-  BookDateFormat: "January 2, 2006"
+  # (Optional, default none) Enable 'Edit page' links. Requires 'GeekdocRepo' param
+  # and path must point to 'content' directory of repo.
+  # You can also specify this parameter per page in front matter.
+  # geekdocEditPath: "edit/main/exampleSite/content"
 
-  # (Optional, default true) Enables search function with flexsearch,
-  # Index is built on fly, therefore it might slowdown your website.
-  # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch: true
+  # (Optional, default true) Enables search function with flexsearch.
+  # Index is built on the fly and might slow down your website.
+  geekdocSearch: true
 
-  # (Optional, default true) Enables comments template on pages
-  # By default partals/docs/comments.html includes Disqus template
-  # See https://gohugo.io/content-management/comments/#configure-disqus
-  # Can be overwritten by same param in page frontmatter
-  bBookComments: false
+  # (Optional, default false) Display search results with the parent folder as prefix. This
+  # option allows you to distinguish between files with the same name in different folders.
+  # NOTE: This parameter only applies when 'geekdocSearch: true'.
+  geekdocSearchShowParent: true
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
-  # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
-  # Theme will print warning if page referenced in markdown does not exists.
-  BookPortableLinks: true
+  # (Optional, default none) Add a link to your Legal Notice page to the site footer.
+  # It can be either a remote url or a local file path relative to your content directory.
+  # geekdocLegalNotice: "https://blog.example.com/legal"
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker: true
+  # (Optional, default none) Add a link to your Privacy Policy page to the site footer.
+  # It can be either a remote url or a local file path relative to your content directory.
+  # geekdocPrivacyPolicy: "/privacy"
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables a drop-down menu for translations only if a translation is present.
-  BookTranslatedOnly: false
+  # (Optional, default true) Add an anchor link to headlines.
+  geekdocAnchor: true
+
+  # (Optional, default true) Copy anchor url to clipboard on click.
+  geekdocAnchorCopy: true
+
+  # (Optional, default true) Enable or disable image lazy loading for images rendered
+  # by the 'img' shortcode.
+  geekdocImageLazyLoading: true
+
+  # (Optional, default false) Set HTMl <base> to .Site.BaseURL if enabled. It might be required
+  # if a subdirectory is used within Hugos BaseURL.
+  # See https://developer.mozilla.org/de/docs/Web/HTML/Element/base.
+  geekdocOverwriteHTMLBase: false
+
+  # (Optional, default false) Auto-decrease brightness of images and add a slightly grayscale to avoid
+  # bright spots while using the dark mode.
+  geekdocDarkModeDim: false
+
+  # (Optional, default true) Display a "Back to top" link in the site footer.
+  geekdocBackToTop: false
+
+  # (Optional, default false) Enable or disable adding tags for post pages automatically to the navigation sidebar.
+  geekdocTagsToMenu: true
+
+  # (Optional, default 'title') Configure how to sort file-tree menu entries. Possible options are 'title', 'linktitle',
+  # 'date', 'publishdate', 'expirydate' or 'lastmod'. Every option can be used with a reverse modifier as well
+  # e.g. 'title_reverse'.
+  geekdocFileTreeSortBy: "title"
 
 security:
   enableInlineShortcodes: false

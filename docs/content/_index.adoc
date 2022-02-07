@@ -1,36 +1,53 @@
 ---
 type: docs
 draft: false
-bookFlatSection: true
 ---
 
-== The uCPU
+== The µCPU
 
+[.right.text-center]
 ****
-.Early version of the CPU on breadboards
-image::./img/breadboard.jpg[Early version of the CPU on breadboards]
+image::./img/logos/µcpu-logos.jpeg[alt=ucpu logo, width=300]
 ****
 
-This is a 16bit pipelined CPU designed on a breadboard and produced in modular component boards that connect via a backplane.
+This is a 16bit pipelined CPU built to be used for experimentation, programming and fun. The CPU is was designed on a breadboard and produced on PCBs in modular architecture utilizing a flexible backplane for expansion and upgrades.
 
-My objective in this project is to learn electronics, CPU design and build a fully functional CPU that can be updated, added to and further developed easily.
+The objective of the µCPU project is to learn electronics, CPU design and build a fully functional CPU that can be updated, added to and further developed easily.
 
-The CPU is designed around
-
-* four general purpose 16 bit registers
-* four 16 bit address registers
-* ALU supporting addition, subtraction, shift and bitwise operations
-* piplined instructions
-* banked memory with a base of 64k, expandable to about 1.5 megabytes (max TBD)
+The completed project will include 32 Kb ROM, 32 Kb RAM, a pipelined core, serial port, cartridge support,  VGA compatible video, stereo multi voice sound and more.
 
 == Architecture
 
-General purpose registers A, B, C, D
+[.right.text-center]
+****
+.Early version of the CPU on breadboards
+image::./img/breadboard.jpg[alt=Early version of the CPU on breadboards, width=300]
+****
 
-Address registers PC, SP, SI, DI
+The CPU is being targeted at approximately the PC AT (286) level or Super Nintendo
 
-Memory 64k to 256k
+* Four general purpose 16 bit registers (A, B, C, D)
+* Four 16 bit address registers (PC, SP, SI, DI)
+* ALU supporting addition, subtraction, shift and bitwise operations
+* Pipelined instructions
+* Clock runs at 4Mhz
+* Banked memory with a base of 32 Kb ROM and 32 Kb RAM, expandable to  304 Kb RAM
+* 4 I/O ports for testing and expansion
+* Serial port
+* 64k Video memory supporting
+    * 320×200 in 256 colors
+    * 640x350 in 4 (or 16???) colors
+* Sprite and effect processing (details TBD)
+* Stereo multi-voice sound (details TBD)
+* A custom bootable OS
+* A BASIC interpreter (ROM)
+* Drive support (SD interface to start with)
+* Cartridge support (ROMs)
 
+After the CPU is working I may add
+
+* DMA
+* ... more?
 
 ****
 .CPU Architecture
@@ -38,14 +55,13 @@ Memory 64k to 256k
 image::./img/CPUArchitecture.svg[CPU Architecture]
 ****
 
-
 == Schematics
 
-* Address Register (rev 1.2) [link:./img/schematics/AddressRegisterModule.pdf[PDF, window="_blank"]][link:./img/schematics/AddressRegisterModule.svg[SVG, window="_blank"]][link:./img/schematics/AddressRegisterModule.png[PNG, window="_blank"]]
-* ALU (rev 1.0) [link:./img/schematics/ALUModule.pdf[PDF, window="_blank"]][link:./img/schematics/ALUModule.svg[SVG, window="_blank"]][link:./img/schematics/ALUModule.png[PNG, window="_blank"]]
-* Backplane (rev 1.0)[link:./img/schematics/Backplane.pdf[PDF, window="_blank"]][link:./img/schematics/Backplane.svg[SVG, window="_blank"]][link:./img/schematics/Backplane.png[PNG, window="_blank"]]
-* GPR (rev 1.3)[link:./img/schematics/GPRModule.pdf[PDF, window="_blank"]][link:./img/schematics/GPRModule.svg[SVG, window="_blank"]][link:./img/schematics/GPRModule.png[PNG, window="_blank"]]
-* Memory (rev 1.0)[link:./img/schematics/MemoryModule.pdf[PDF, window="_blank"]][link:./img/schematics/MemoryModule.svg[SVG, window="_blank"]][link:./img/schematics/MemoryModule.png[PNG, window="_blank"]]
+* GPR (rev 1.3) [link:/ucpu/img/schematics/GPRModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/GPRModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/GPRModule.png[PNG, window="_blank"]]
+* Address Register (rev 1.2) [link:/ucpu/img/schematics/AddressRegisterModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/AddressRegisterModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/AddressRegisterModule.png[PNG, window="_blank"]]
+* ALU (rev 1.0) [link:/ucpu/img/schematics/ALUModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/ALUModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/ALUModule.png[PNG, window="_blank"]]
+* Backplane (rev 1.0)[link:/ucpu/img/schematics/Backplane.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/Backplane.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/Backplane.png[PNG, window="_blank"]]
+* Memory (rev 1.0)[link:/ucpu/img/schematics/MemoryModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/MemoryModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/MemoryModule.png[PNG, window="_blank"]]
 
 == BOM
 

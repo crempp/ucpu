@@ -1,0 +1,41 @@
+---
+title: "Backplane"
+date: 2022-02-04T14:46:34-08:00
+weight: 50
+draft: false
+---
+
+== Backplane
+
+
+[NOTE]
+Backplane (rev 1.0)[link:/ucpu/img/schematics/Backplane.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/Backplane.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/Backplane.png[PNG, window="_blank"]]
+
+****
+.General Purpose Register Schematic
+[link=/ucpu/img/schematics/Backplane.svg,window="_blank"]
+image::/ucpu/img/schematics/Backplane.png[General Purpose Register Schematic]
+****
+
+* Power
+** Add voltage supervisor LP3470 to provide consistent starting state
+* Reset
+** Design circuit
+** Wait for stable power
+** Low power monitor
+** ...?
+** https://www.grappendorf.net/projects/6502-home-computer/reset-circuit.html
+** https://www.smbaker.com/z80-power-on-reset-circuits
+** https://blog.mark-stevens.co.uk/2020/01/ne555-power-on-reset/
+* Timer
+** Better 555 circuit with 50% duty cycle
+** https://ohmslawcalculator.com/555-astable-calculator
+** https://www.multisim.com/content/d5VPrhr8otpMN6bm34r4JM/555-adjustable-frequency-50-duty-cycle-astable-multivibrator-charge-by-bjt-pull-up/
+** https://www.electronics-tutorials.ws/waveforms/555-circuits-part-1.html
+** Crystal
+* Controls
+** Better denounce https://www.eejournal.com/article/ultimate-guide-to-switch-debounce-part-5/
+* Bus pull up/down where appropriate
+* Add bare test points for all CLK and /CLK, etc points for future bodges :)
+
+=== References

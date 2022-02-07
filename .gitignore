@@ -25,7 +25,7 @@ fp-info-cache
 *.xml
 *.csv
 
-
+\#auto_saved_files#
 .idea
 
 .hugo_build.lock

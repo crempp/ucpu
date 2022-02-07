@@ -1,0 +1,64 @@
+---
+title: "Address Register"
+date: 2022-02-04T14:46:34-08:00
+weight: 20
+draft: false
+---
+
+=== Address Register
+The address register is a register that has the capability of incrementing and decrementing without the use of the ALU. Unlike the GPRs the address registers do not have access to the X and Y bus however they do have access to the address bus. The address registers can read and rewrite from the data bus and write to the address bus.
+
+[NOTE]
+Schematic (rev 1.2) [link:/ucpu/img/schematics/AddressRegisterModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/AddressRegisterModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/AddressRegisterModule.png[PNG, window="_blank"]]
+
+Seven control signals control the operation of the address register.
+
+[.center]
+[cols="1h,1,1,3", width=75%]
+|===
+| d_bus_read | 16 bit | Active high
+| Read the contents of the data bus into the register latch
+
+| d_bus_write | 16 bit | Active high
+| Write the contents of the register latch onto the data bus
+
+| a_bus_write | 16 bit | Active high
+| Write the contents of the register latch onto the address bus
+
+| reg_inc | 16 bit | Active high
+| Increment the register by one
+
+| reg_dec | 16 bit | Active high
+| Decrement the register by one
+
+| reg_carry | 16 bit | Active high
+| This line is high if the counter performed a carry in the previous increment/decrement operation
+
+| reg_borrow | 16 bit | Active high
+| This line is high if the counter performed a borrow in the previous increment/decrement operation
+|===
+
+## Notes
+
+* Breadboard controls (R-L)
+** d_bus_read
+** d_bus_write
+** a_bus_write
+** inc
+** dec
+** carry
+** borrow
+* While counting down or up the other should be held high
+* If not the counter will not work
+* Held high via pull up resistor in case of floating input
+* On reset set to known state (important for PC)
+
+****
+.Address Purpose Register Schematic
+[link=/ucpu/img/schematics/AddressRegisterModule.svg,window="_blank"]
+image::/ucpu/img/schematics/AddressRegisterModule.png[General Purpose Register Schematic]
+****
+
+
+
+=== References
