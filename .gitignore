@@ -27,5 +27,6 @@ fp-info-cache
 
 \#auto_saved_files#
 .idea
+cpu/cpu-backups/*
 
 .hugo_build.lock
