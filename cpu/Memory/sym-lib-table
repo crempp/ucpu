@@ -3,4 +3,5 @@
   (lib (name "cpu_custom_symbols")(type "Legacy")(uri "${KIPRJMOD}/../lib/symbols/cpu_custom_symbols.lib")(options "")(descr ""))
   (lib (name "Maxim_DS1220AD")(type "Legacy")(uri "${KIPRJMOD}/../lib/IC_Maxim_DS1220AD-200+/eec.lib")(options "")(descr ""))
   (lib (name "AT28C64B-15PU.lib")(type "Legacy")(uri "${KIPRJMOD}/../lib/symbols/AT28C64B-15PU.lib")(options "")(descr ""))
+  (lib (name "AS6C6264-55PCN")(type "Legacy")(uri "${KIPRJMOD}/../lib/IC_Alliance Memory_AS6C6264-55PCN/eec.lib")(options "")(descr ""))
 )
