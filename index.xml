@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>µCPU Documentation</title><link>https://crempp.github.io/ucpu/</link><description>Recent content on µCPU Documentation</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>2020, Chad Rempp</copyright><atom:link href="https://crempp.github.io/ucpu/index.xml" rel="self" type="application/rss+xml"/><item><title>Assembler</title><link>https://crempp.github.io/ucpu/docs/software/assembler/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/software/assembler/</guid><description>Assembler References customasm
-ttlcpu</description></item><item><title>Basic</title><link>https://crempp.github.io/ucpu/docs/software/basic/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/software/basic/</guid><description>Basic References 6502 Basic Assembler with source</description></item><item><title>Operating System</title><link>https://crempp.github.io/ucpu/docs/software/operating-system/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/software/operating-system/</guid><description>Operating System References</description></item><item><title>Testing</title><link>https://crempp.github.io/ucpu/docs/testing/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/testing/</guid><description>Tests
+ttlcpu</description></item><item><title>Basic</title><link>https://crempp.github.io/ucpu/docs/software/basic/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/software/basic/</guid><description>Basic References 6502 Basic Assembler with source</description></item><item><title>Operating System</title><link>https://crempp.github.io/ucpu/docs/software/operating-system/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/software/operating-system/</guid><description>Operating System References</description></item><item><title>General Purpose Registers</title><link>https://crempp.github.io/ucpu/docs/cpu-components/general-purpose-register/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/general-purpose-register/</guid><description>General Purpose Registers Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.
+The CPU supports up to four registers: A, B, C and D.</description></item><item><title>Testing</title><link>https://crempp.github.io/ucpu/docs/testing/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/testing/</guid><description>Tests
 GRP
 Write to DBUS
 Read from DBUS
@@ -10,14 +11,36 @@ Write to DBUS
 Read from DBUS
 Write to ABUS
 Increment
-Decrement</description></item><item><title>General Purpose Registers</title><link>https://crempp.github.io/ucpu/docs/cpu-components/general-purpose-register/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/general-purpose-register/</guid><description>General Purpose Registers Registers are small, fast memory which are close and easily accessible by the core components of the CPU. These are typically used for intermediate and temporary storage for intermediate values or data to be transferred to other areas of the CPU such as memory or IO. A common use is for instruction parameters in the ALU.
-The CPU supports up to four registers: A, B, C and D.</description></item><item><title>Address Register</title><link>https://crempp.github.io/ucpu/docs/cpu-components/address-register/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/address-register/</guid><description>Address Register The address register is a register that has the capability of incrementing and decrementing without the use of the ALU. Unlike the GPRs the address registers do not have access to the X and Y bus however they do have access to the address bus. The address registers can read and rewrite from the data bus and write to the address bus.
-Note Schematic (rev 1.</description></item><item><title>Memory</title><link>https://crempp.github.io/ucpu/docs/cpu-components/memory/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/memory/</guid><description>Memory The memory module has 64 Kb of addressable memory space with a base configuration of 32 Kb of ROM and 32 Kb of RAM. Bank switching is supported extending the available memory to
-304 Kb of RAM
-32 Kb of system ROM
-32 Kb of cartrige ROM
-32 Kb of I/O ROM
-Note Memory (rev 1.</description></item><item><title>Pipeline</title><link>https://crempp.github.io/ucpu/docs/cpu-components/pipeline/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/pipeline/</guid><description>Pipeline References https://www.cs.fsu.edu/~zwang/files/cda3101/Fall2017/Lecture8_cda3101.pdf</description></item><item><title>Backplane</title><link>https://crempp.github.io/ucpu/docs/cpu-components/backplane/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/backplane/</guid><description>Backplane Note Backplane (rev 1.0)[PDF] [SVG] [PNG] Figure 1. General Purpose Register Schematic Power
+Decrement</description></item><item><title>Address Register</title><link>https://crempp.github.io/ucpu/docs/cpu-components/address-register/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/address-register/</guid><description>Address Register The address register is a register that has the capability of incrementing and decrementing without the use of the ALU. Unlike the GPRs the address registers do not have access to the X and Y bus however they do have access to the address bus. The address registers can read and rewrite from the data bus and write to the address bus.
+Note Schematic (rev 1.</description></item><item><title>Datasheets</title><link>https://crempp.github.io/ucpu/docs/datasheets/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/datasheets/</guid><description> LS7400
+74LS04
+74LS08
+74LS125
+74LS139
+74LS173
+74LS193
+74LS245
+74LS574
+AT28C64B
+AS6C6264</description></item><item><title>Memory</title><link>https://crempp.github.io/ucpu/docs/cpu-components/memory/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/memory/</guid><description>The memory module has 64 KB of addressable memory space with a base configuration of 16 KB of ROM and 48 KB of RAM. Bank switching is supported extending the available memory to
+128 KB of RAM (with extension)
+16 KB of system ROM
+16 KB of cartridge ROM
+16 KB of BASIC ROM (extension)
+16 KB of extra ROM (extension via IO board)</description></item><item><title>TODO</title><link>https://crempp.github.io/ucpu/docs/TODO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crempp.github.io/ucpu/docs/TODO/</guid><description>TODO: License file
+Update all schematics to use HCT rather than LS
+Documentation
+Add memory timing diagram to documentation
+Bank diagram in documentation
+Create memory map with stack, I/O, Video etc. locations
+Address Reg
+Validate connector positions
+Memory
+Backplane
+Add pull down resistors to bus&amp;#39;
+Compliler</description></item><item><title>Pipeline</title><link>https://crempp.github.io/ucpu/docs/cpu-components/pipeline/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/pipeline/</guid><description>Pipeline In Progress
+References https://www.cs.fsu.edu/~zwang/files/cda3101/Fall2017/Lecture8_cda3101.pdf</description></item><item><title>Backplane</title><link>https://crempp.github.io/ucpu/docs/cpu-components/backplane/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/cpu-components/backplane/</guid><description>Backplane In Progress
+Note Backplane (rev 1.0)[PDF] [SVG] [PNG] Figure 1. General Purpose Register Schematic Power
 Add voltage supervisor LP3470 to provide consistent starting state
 Reset
 Design circuit
@@ -25,15 +48,4 @@ Wait for stable power
 Low power monitor
 …​?
 https://www.grappendorf.net/projects/6502-home-computer/reset-circuit.html
-https://www.smbaker.com/z80-power-on-reset-circuits
-https://blog.</description></item><item><title/><link>https://crempp.github.io/ucpu/docs/specimen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crempp.github.io/ucpu/docs/specimen/</guid><description>This guide provides a gentle introduction to AsciiDoc, a plain text documentation syntax and processor. This introduction is intended for anyone who wants to reduce the effort required to write and publish content, whether for technical documentation, articles, web pages or good ol&amp;#39;-fashioned prose.
-If you want to know what AsciiDoc is all about, find the answer in About AsciiDoc. If you’re looking for a concise survey of the AsciiDoc syntax, consult the AsciiDoc Syntax Quick Reference.</description></item><item><title/><link>https://crempp.github.io/ucpu/docs/TODO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crempp.github.io/ucpu/docs/TODO/</guid><description>TODO: License file
-Documentation
-Get Antora running
-Address Reg
-Validate connector positions
-Memory
-Compliler
-Web editor for writing code
-JS compiler
-JS emulator</description></item></channel></rss>
+https://www.</description></item></channel></rss>

@@ -9,14 +9,25 @@ Write to DBUS
 Read from DBUS
 Write to ABUS
 Increment
-Decrement</description></item><item><title/><link>https://crempp.github.io/ucpu/docs/specimen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crempp.github.io/ucpu/docs/specimen/</guid><description>This guide provides a gentle introduction to AsciiDoc, a plain text documentation syntax and processor. This introduction is intended for anyone who wants to reduce the effort required to write and publish content, whether for technical documentation, articles, web pages or good ol&amp;#39;-fashioned prose.
-If you want to know what AsciiDoc is all about, find the answer in About AsciiDoc. If you’re looking for a concise survey of the AsciiDoc syntax, consult the AsciiDoc Syntax Quick Reference.</description></item><item><title/><link>https://crempp.github.io/ucpu/docs/TODO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crempp.github.io/ucpu/docs/TODO/</guid><description>TODO: License file
+Decrement</description></item><item><title>Datasheets</title><link>https://crempp.github.io/ucpu/docs/datasheets/</link><pubDate>Fri, 04 Feb 2022 14:46:34 -0800</pubDate><guid>https://crempp.github.io/ucpu/docs/datasheets/</guid><description> LS7400
+74LS04
+74LS08
+74LS125
+74LS139
+74LS173
+74LS193
+74LS245
+74LS574
+AT28C64B
+AS6C6264</description></item><item><title>TODO</title><link>https://crempp.github.io/ucpu/docs/TODO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://crempp.github.io/ucpu/docs/TODO/</guid><description>TODO: License file
+Update all schematics to use HCT rather than LS
 Documentation
-Get Antora running
+Add memory timing diagram to documentation
+Bank diagram in documentation
+Create memory map with stack, I/O, Video etc. locations
 Address Reg
 Validate connector positions
 Memory
-Compliler
-Web editor for writing code
-JS compiler
-JS emulator</description></item></channel></rss>
+Backplane
+Add pull down resistors to bus&amp;#39;
+Compliler</description></item></channel></rss>
