@@ -16,23 +16,29 @@ Each register has access to multiple busses in the CPU. 16 bit values may be rea
 [NOTE]
 GPR (rev 1.3) [link:/ucpu/img/schematics/GPRModule.pdf[PDF, window="_blank"]] [link:/ucpu/img/schematics/GPRModule.svg[SVG, window="_blank"]] [link:/ucpu/img/schematics/GPRModule.png[PNG, window="_blank"]]
 
+== Register Control
+
 Four control signals control the operation of the general purpose register.
 
 [.center]
-[cols="1h,1,1,3", width=75%]
+[cols="1h,1,3", width=75%]
 |===
-| d_bus_read | 16 bit | Active high
+| d_bus_read | Active high
 | Read the contents of the data bus into the register latch
 
-| d_bus_write | 16 bit | Active Low
+| d_bus_write | Active Low
 | Write the contents of the register latch onto the data bus
 
-|x_bus_write | 16 bit | Active Low
+|x_bus_write | Active Low
 | Write the contents of the register latch onto the X bus to be used by the ALU
 
-| y_bus_write | 16 bit | Active Low
-|  Write the contents of the register latch onto the Y bus to be used by the ALU
+| y_bus_write | Active Low
+| Write the contents of the register latch onto the Y bus to be used by the ALU
 |===
+
+== Appendix
+
+=== Schematic
 
 ****
 .General Purpose Register Schematic
@@ -40,5 +46,32 @@ Four control signals control the operation of the general purpose register.
 image::/ucpu/img/schematics/GPRModule.png[General Purpose Register Schematic]
 ****
 
-=== References
-* TODO
+=== BOM
+
+[.center.compact.nostripe]
+[cols="2,1,3,2,2,1,1"]
+|===
+| Reference  | Quantity |  Value          | Datasheet | Digikey | Price | Total
+
+| C1 - C11   | 11       | 1uf             |           |         |       |
+
+| C12 - C13  | 2        | 10uf            |           |         |       |
+
+| D0 - D15   | 16       | Red LED         |           |         |       |
+
+| D16 - D19  | 4        | Amber LED       |           |         |       |
+
+| R16 - R19  | 4        | 220R            |           |         |       |
+
+| RN1 - RN2  | 2        | 220R            |           | Y1221CT-ND |       |
+
+| U1 - U2    | 2        | 74HCT574
+| link:/ucpu/datasheets/74LS574.pdf[Datasheet, window=_blank] |         |       |
+
+| U3 - U10  | 8        | 74HCT245
+| link:/ucpu/datasheets/74LS245.pdf[Datasheet, window=_blank] |         |       |
+
+| U11       | 1        | 74HCT125
+|link:/ucpu/datasheets/74LS125.pdf[Datasheet, window=_blank] |         |       |
+
+|===

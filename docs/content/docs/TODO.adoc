@@ -1,23 +1,31 @@
 ---
-type: docs
+title: "TODO"
+weight: 30
 draft: false
-bookFlatSection: true
 ---
 
 == TODO:
 
 . License file
+. Update all schematics to use HCT rather than LS
 
 Documentation
 
-. Get Antora running
+. Add memory timing diagram to documentation
+. Bank diagram in documentation
+. Create memory map with stack, I/O, Video etc. locations
 
 Address Reg
 
 . Validate connector positions
 
+
 Memory
 
+
+Backplane
+
+. Add pull down resistors to bus'
 
 Compliler
 

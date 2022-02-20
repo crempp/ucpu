@@ -7,6 +7,7 @@ draft: false
 
 == Pipeline
 
+In Progress
 
 === References
 * https://www.cs.fsu.edu/~zwang/files/cda3101/Fall2017/Lecture8_cda3101.pdf
