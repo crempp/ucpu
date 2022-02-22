@@ -1,0 +1,19 @@
+---
+title: "Datasheets"
+date: 2022-02-04T14:46:34-08:00
+weight: 20
+draft: false
+---
+
+- link:/ucpu/datasheets/74LS00.pdf[LS7400, window=_blank]
+- link:/ucpu/datasheets/74LS04.pdf[74LS04, window=_blank]
+- link:/ucpu/datasheets/74LS08.pdf[74LS08, window=_blank]
+- link:/ucpu/datasheets/74LS125.pdf[74LS125, window=_blank]
+- link:/ucpu/datasheets/74LS139.pdf[74LS139, window=_blank]
+- link:/ucpu/datasheets/74LS173.pdf[74LS173, window=_blank]
+- link:/ucpu/datasheets/74LS193.pdf[74LS193, window=_blank]
+- link:/ucpu/datasheets/74LS245.pdf[74LS245, window=_blank]
+- link:/ucpu/datasheets/74LS574.pdf[74LS574, window=_blank]
+- link:/ucpu/datasheets/AT28C64B.pdf[AT28C64B, window=_blank]
+- link:/ucpu/datasheets/AS6C6264.pdf[AS6C6264, window=_blank]
+

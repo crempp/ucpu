@@ -1,3 +1,9 @@
+---
+title: "Specimen"
+date: 2022-02-04T14:46:34-08:00
+weight: 50
+draft: true
+---
 // View this document online at https://asciidoctor.org/docs/asciidoc-writers-guide/
 = AsciiDoc Writer's Guide
 Dan Allen <https://github.com/mojavelinux[@mojavelinux]>; Sarah White <https://github.com/graphitefriction[@graphitefriction]>
