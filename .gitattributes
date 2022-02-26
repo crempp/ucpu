@@ -1,0 +1,6 @@
+# Apply override to all files in the directory
+docs/* linguist-documentation
+# Enable KiCad files
+*.kicad_pcb linguist-detectable
+*.kicad_mod linguist-detectable
+*.sch linguist-detectable
