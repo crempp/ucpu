@@ -147,11 +147,11 @@ X ~ 2 0 -150 130 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D_ALT
+# Device_LED_Filled
 #
-DEF Device_D_ALT D 0 40 N N 1 F N
+DEF Device_LED_Filled D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D_ALT" 0 -100 50 H V C CNN
+F1 "Device_LED_Filled" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -169,11 +169,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_LED_ALT
+# Device_LED_Filled
 #
-DEF Device_LED_ALT D 0 40 N N 1 F N
+DEF Device_LED_Filled D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_LED_ALT" 0 -100 50 H V C CNN
+F1 "Device_LED_Filled" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST

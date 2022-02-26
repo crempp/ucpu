@@ -647,7 +647,7 @@ $EndComp
 Wire Wire Line
 	12800 1550 12800 1750
 $Comp
-L Device:D_ALT D1
+L Device:LED_Filled D1
 U 1 1 5F39D1DC
 P 12600 3150
 F 0 "D1" V 12700 3150 50  0000 R CNN
@@ -659,7 +659,7 @@ F 4 "732-4991-1-ND" H 12600 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D2
+L Device:LED_Filled D2
 U 1 1 5F3A1909
 P 12800 3150
 F 0 "D2" V 12900 3150 50  0000 R CNN
@@ -671,7 +671,7 @@ F 4 "732-4991-1-ND" H 12800 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D3
+L Device:LED_Filled D3
 U 1 1 5F3BD052
 P 13000 3150
 F 0 "D3" V 13100 3150 50  0000 R CNN
@@ -683,7 +683,7 @@ F 4 "732-4991-1-ND" H 13000 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D4
+L Device:LED_Filled D4
 U 1 1 5F3BD066
 P 13200 3150
 F 0 "D4" V 13300 3150 50  0000 R CNN
@@ -695,7 +695,7 @@ F 4 "732-4991-1-ND" H 13200 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D5
+L Device:LED_Filled D5
 U 1 1 5F41313D
 P 13400 3150
 F 0 "D5" V 13500 3150 50  0000 R CNN
@@ -707,7 +707,7 @@ F 4 "732-4991-1-ND" H 13400 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D6
+L Device:LED_Filled D6
 U 1 1 5F413151
 P 13600 3150
 F 0 "D6" V 13700 3150 50  0000 R CNN
@@ -719,7 +719,7 @@ F 4 "732-4991-1-ND" H 13600 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D7
+L Device:LED_Filled D7
 U 1 1 5F413165
 P 13800 3150
 F 0 "D7" V 13900 3150 50  0000 R CNN
@@ -731,7 +731,7 @@ F 4 "732-4991-1-ND" H 13800 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D8
+L Device:LED_Filled D8
 U 1 1 5F413179
 P 14000 3150
 F 0 "D8" V 14100 3150 50  0000 R CNN
@@ -743,7 +743,7 @@ F 4 "732-4991-1-ND" H 14000 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D9
+L Device:LED_Filled D9
 U 1 1 5F43126B
 P 14200 3150
 F 0 "D9" V 14300 3150 50  0000 R CNN
@@ -755,7 +755,7 @@ F 4 "732-4991-1-ND" H 14200 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D10
+L Device:LED_Filled D10
 U 1 1 5F43127F
 P 14400 3150
 F 0 "D10" V 14500 3150 50  0000 R CNN
@@ -767,7 +767,7 @@ F 4 "732-4991-1-ND" H 14400 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_ALT D11
+L Device:LED_Filled D11
 U 1 1 5F431293
 P 14600 3150
 F 0 "D11" V 14700 3150 50  0000 R CNN
@@ -779,7 +779,7 @@ F 4 "732-4991-1-ND" H 14600 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_ALT D12
+L Device:LED_Filled D12
 U 1 1 5F4312A7
 P 14800 3150
 F 0 "D12" V 14900 3150 50  0000 R CNN
@@ -791,7 +791,7 @@ F 4 "732-4991-1-ND" H 14800 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_ALT D13
+L Device:LED_Filled D13
 U 1 1 5F4312BB
 P 15000 3150
 F 0 "D13" V 15100 3150 50  0000 R CNN
@@ -803,7 +803,7 @@ F 4 "732-4991-1-ND" H 15000 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_ALT D14
+L Device:LED_Filled D14
 U 1 1 5F4312CF
 P 15200 3150
 F 0 "D14" V 15300 3150 50  0000 R CNN
@@ -815,7 +815,7 @@ F 4 "732-4991-1-ND" H 15200 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_ALT D15
+L Device:LED_Filled D15
 U 1 1 5F4312E3
 P 15400 3150
 F 0 "D15" V 15500 3150 50  0000 R CNN
@@ -827,7 +827,7 @@ F 4 "732-4991-1-ND" H 15400 3150 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_ALT D16
+L Device:LED_Filled D16
 U 1 1 5F4312F7
 P 15600 3150
 F 0 "D16" V 15700 3150 50  0000 R CNN
@@ -1085,7 +1085,7 @@ $EndComp
 Wire Wire Line
 	9450 5350 9450 5450
 $Comp
-L Device:D_ALT D17
+L Device:LED_Filled D17
 U 1 1 5FD25D31
 P 8000 7000
 F 0 "D17" V 8100 7000 50  0000 R CNN
@@ -1097,7 +1097,7 @@ F 4 "732-4994-1-ND" H 8000 7000 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D18
+L Device:LED_Filled D18
 U 1 1 5FD25D45
 P 8200 7000
 F 0 "D18" V 8300 7000 50  0000 R CNN
@@ -1109,7 +1109,7 @@ F 4 "732-4994-1-ND" H 8200 7000 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D19
+L Device:LED_Filled D19
 U 1 1 5FD25D59
 P 8400 7000
 F 0 "D19" V 8500 7000 50  0000 R CNN
@@ -1121,7 +1121,7 @@ F 4 "732-4994-1-ND" H 8400 7000 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D20
+L Device:LED_Filled D20
 U 1 1 5FD25D6D
 P 8600 7000
 F 0 "D20" V 8700 7000 50  0000 R CNN
@@ -1133,7 +1133,7 @@ F 4 "732-4994-1-ND" H 8600 7000 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D21
+L Device:LED_Filled D21
 U 1 1 5FD25D81
 P 8800 7000
 F 0 "D21" V 8900 7000 50  0000 R CNN
@@ -1145,7 +1145,7 @@ F 4 "732-4994-1-ND" H 8800 7000 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D22
+L Device:LED_Filled D22
 U 1 1 5FD25D95
 P 9000 7000
 F 0 "D22" V 9100 7000 50  0000 R CNN
@@ -1157,7 +1157,7 @@ F 4 "732-4994-1-ND" H 9000 7000 50  0001 C CNN "Digikey"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:D_ALT D23
+L Device:LED_Filled D23
 U 1 1 5FD25DA9
 P 9200 7000
 F 0 "D23" V 9300 7000 50  0000 R CNN
@@ -2709,7 +2709,7 @@ Wire Wire Line
 NoConn ~ 8850 5850
 NoConn ~ 8850 5950
 $Comp
-L Device:CP1 C13
+L Device:C_Polarized_US C13
 U 1 1 6022740E
 P 13550 5600
 F 0 "C13" H 13665 5646 50  0000 L CNN
@@ -2721,7 +2721,7 @@ F 4 "493-9786-1-ND" H 13550 5600 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1 C14
+L Device:C_Polarized_US C14
 U 1 1 6026F09E
 P 13950 5600
 F 0 "C14" H 14065 5646 50  0000 L CNN
