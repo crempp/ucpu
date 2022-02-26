@@ -1,0 +1,11 @@
+/* Lexical Part */
+
+id : 'a'-'z' {'a'-'z'} ;
+
+!whitespace : ' ' | '\t' | '\n' | '\r' ;
+
+/* Syntax Part */
+
+<< import "assembler/ast" >>
+
+Hello:  "hello" id << ast.NewWorld($1) >> ;
